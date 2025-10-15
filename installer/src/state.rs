@@ -95,7 +95,7 @@ pub enum PartitionSize {
     Remainder,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub enum FileSystem {
     Ext4,
     Btrfs,

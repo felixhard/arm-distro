@@ -6,7 +6,8 @@ use parking_lot::RwLock;
 use slint::{ModelRc, SharedString, VecModel};
 use tracing::{error, info, warn};
 
-use crate::backend::Backend;
+use crate::backend::{partition, Backend};
+use crate::backend::tasks::InstallPlan;
 use crate::state::{DiskIdentifier, InstallerState};
 
 slint::include_modules!();
@@ -15,13 +16,19 @@ pub struct App {
     window: AppWindow,
     backend: Backend,
     state: Arc<RwLock<InstallerState>>,
+    _plan: Arc<RwLock<Option<InstallPlan>>>,
 }
 
 impl App {
     pub fn new(state: Arc<RwLock<InstallerState>>, backend: Backend) -> Result<Self> {
         let window = AppWindow::new()?;
+        window.set_installing(false);
+        let plan_holder: Arc<RwLock<Option<InstallPlan>>> = Arc::new(RwLock::new(None));
 
         let steps = init_steps(&window, &state);
+
+        window.set_install_plan_summary(SharedString::new());
+        window.set_install_log(SharedString::new());
 
         match backend.list_disks() {
             Ok(disks) => {
@@ -36,6 +43,7 @@ impl App {
         let next_state = state.clone();
         let steps_for_next = Arc::clone(&steps);
         let backend_for_install = backend.clone();
+        let plan_store = Arc::clone(&plan_holder);
         let next_weak = window.as_weak();
         window.on_request_next(move || {
             if let Some(window) = next_weak.upgrade() {
@@ -46,15 +54,55 @@ impl App {
                     window.set_current_step_index(new_idx);
                     next_state.write().current_step = new_idx as usize;
                     update_current_step_labels(&window, &steps_for_next, new_idx as usize);
+                    window.set_install_log(SharedString::new());
                 } else {
-                    match backend_for_install.begin_installation() {
-                        Ok(plan) => {
-                            info!(step_count = plan.steps().len(), "prepared installation plan");
-                        }
-                        Err(err) => {
-                            error!("failed to prepare installation plan: {:#}", err);
-                        }
-                    }
+                    let plan = match plan_store.read().clone() {
+                        Some(plan) => plan,
+                        None => match backend_for_install.begin_installation() {
+                            Ok(plan) => {
+                                info!(step_count = plan.steps().len(), "prepared installation plan");
+                                plan_store.write().replace(plan.clone());
+                                window.set_install_plan_summary(build_install_plan_summary(&plan));
+                                window.set_install_log(SharedString::new());
+                                plan
+                            }
+                            Err(err) => {
+                                error!("failed to prepare installation plan: {:#}", err);
+                                window.set_install_log(SharedString::from(format!("Plan generation failed: {err:#}")));
+                                return;
+                            }
+                        },
+                    };
+
+                    window.set_installing(true);
+                    window.set_install_log(SharedString::from("Running installation..."));
+                    let window_for_log = window.as_weak();
+                    let backend_runner = backend_for_install.clone();
+                    std::thread::spawn(move || {
+                        let run_result = backend_runner.execute_plan_stream(plan.clone(), |line| {
+                            let window_for_log = window_for_log.clone();
+                            let line_owned = line.clone();
+                            let _ = slint::invoke_from_event_loop(move || {
+                                if let Some(window) = window_for_log.upgrade() {
+                                    append_log(&window, &line_owned);
+                                }
+                            });
+                        });
+
+                        let final_message = match run_result {
+                            Ok(true) => "Installation completed successfully".to_string(),
+                            Ok(false) => "Installation stopped due to errors".to_string(),
+                            Err(err) => format!("Execution failed: {err:#}"),
+                        };
+
+                        let window_for_log = window_for_log.clone();
+                        let _ = slint::invoke_from_event_loop(move || {
+                            if let Some(window) = window_for_log.upgrade() {
+                                append_log(&window, &final_message);
+                                window.set_installing(false);
+                            }
+                        });
+                    });
                 }
             }
         });
@@ -82,10 +130,11 @@ impl App {
         });
 
         let select_state = state.clone();
+        let select_plan = Arc::clone(&plan_holder);
         let select_weak = window.as_weak();
         window.on_select_disk(move |index| {
             if let Some(window) = select_weak.upgrade() {
-                handle_disk_selection(&window, &select_state, index as usize);
+                handle_disk_selection(&window, &select_state, &select_plan, index as usize);
             }
         });
 
@@ -93,6 +142,7 @@ impl App {
             window,
             backend,
             state,
+            _plan: plan_holder,
         })
     }
 
@@ -150,6 +200,14 @@ fn apply_disk_inventory(
         .collect();
     let model: ModelRc<DiskItem> = Rc::new(VecModel::from(items_vec)).into();
     window.set_disk_items(model);
+
+    let summary = {
+        let guard = state.read();
+        build_disk_summary(&guard)
+    };
+    window.set_disk_selection_summary(summary);
+    window.set_install_plan_summary(SharedString::new());
+    window.set_install_log(SharedString::new());
 }
 
 fn disk_to_item(disk: DiskIdentifier, selected_path: Option<&str>) -> DiskItem {
@@ -192,11 +250,17 @@ fn format_size(bytes: u64) -> SharedString {
     SharedString::from(format!("{value:.1} {}", UNITS[idx]))
 }
 
-fn handle_disk_selection(window: &AppWindow, state: &Arc<RwLock<InstallerState>>, index: usize) {
+fn handle_disk_selection(
+    window: &AppWindow,
+    state: &Arc<RwLock<InstallerState>>,
+    plan_store: &Arc<RwLock<Option<InstallPlan>>>,
+    index: usize,
+) {
     let disks = {
         let mut guard = state.write();
         if let Some(selected) = guard.discovered_disks.get(index).cloned() {
-            guard.selected_disk = Some(selected);
+            guard.selected_disk = Some(selected.clone());
+            guard.target = Some(partition::default_plan_for_disk(&selected));
         } else {
             warn!(index, count = guard.discovered_disks.len(), "disk selection index out of range");
             return;
@@ -204,7 +268,75 @@ fn handle_disk_selection(window: &AppWindow, state: &Arc<RwLock<InstallerState>>
         guard.discovered_disks.clone()
     };
 
+    plan_store.write().take();
+    window.set_install_plan_summary(SharedString::new());
+    window.set_install_log(SharedString::new());
+
     apply_disk_inventory(window, state, disks);
+}
+
+fn append_log(window: &AppWindow, line: &str) {
+    let mut current = window.get_install_log().to_string();
+    if !current.is_empty() {
+        current.push('\n');
+    }
+    current.push_str(line);
+    window.set_install_log(current.into());
+}
+
+fn build_disk_summary(state: &InstallerState) -> SharedString {
+    if let Some(plan) = state.target.as_ref() {
+        let mut lines = Vec::new();
+        lines.push(format!(
+            "Target disk: {} ({})",
+            plan.target.path,
+            human_readable_bytes(plan.target.size_bytes)
+        ));
+        for partition in &plan.partitions {
+            lines.push(format!("  - {}", partition::describe_partition(partition)));
+        }
+        SharedString::from(lines.join("\n"))
+    } else if let Some(disk) = state.selected_disk.as_ref() {
+        SharedString::from(format!(
+            "Selected disk: {} ({})",
+            disk.path,
+            human_readable_bytes(disk.size_bytes)
+        ))
+    } else {
+        SharedString::from("No disk selected")
+    }
+}
+
+fn human_readable_bytes(bytes: u64) -> String {
+    const UNITS: &[&str] = &["B", "KiB", "MiB", "GiB", "TiB"];
+    if bytes == 0 {
+        return "0 B".into();
+    }
+
+    let mut value = bytes as f64;
+    let mut idx = 0;
+    while value >= 1024.0 && idx < UNITS.len() - 1 {
+        value /= 1024.0;
+        idx += 1;
+    }
+
+    format!("{value:.1} {}", UNITS[idx])
+}
+
+fn build_install_plan_summary(plan: &InstallPlan) -> SharedString {
+    let mut lines = Vec::new();
+    lines.push("Installation plan:".to_string());
+    for (idx, step) in plan.steps().iter().enumerate() {
+        lines.push(format!(
+            "{}. {:?}: {} ({} commands)",
+            idx + 1,
+            step.stage,
+            step.summary,
+            step.commands.len()
+        ));
+    }
+
+    SharedString::from(lines.join("\n"))
 }
 
 fn default_steps() -> Vec<StepData> {

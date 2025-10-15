@@ -130,6 +130,10 @@ export component AppWindow inherits Window {
     in-out property <[DiskItem]> disk-items: [];
     in-out property <string> current-step-title: "";
     in-out property <string> current-step-subtitle: "";
+    in-out property <string> disk-selection-summary: "";
+    in-out property <string> install-plan-summary: "";
+    in-out property <string> install-log: "";
+    in-out property <bool> installing: false;
 
     callback request-next();
     callback request-back();
@@ -142,6 +146,10 @@ export component AppWindow inherits Window {
 
     pure function can-go-next() -> bool {
         self.current-step-index + 1 < self.total-steps
+    }
+
+    pure function is-final-step() -> bool {
+        self.current-step-index == self.total-steps - 1
     }
 
     Rectangle {
@@ -226,12 +234,55 @@ export component AppWindow inherits Window {
                                         disk-selected(index) => root.select-disk(index);
                                     }
 
+                                    VerticalBox {
+                                        padding: 16px;
+                                        spacing: 12px;
+                                        visible: root.current-step-index == 4;
+
+                                        Text {
+                                            text: root.disk-selection-summary;
+                                            color: #3d4f6b;
+                                            visible: root.disk-selection-summary != "";
+                                        }
+                                    }
+
+                                    VerticalBox {
+                                        padding: 16px;
+                                        spacing: 12px;
+                                        visible: root.current-step-index == root.total-steps - 1;
+
+                                        Rectangle {
+                                            border-radius: 6px;
+                                            border-width: 1px;
+                                            border-color: #d5d7e3;
+                                            background: #ffffff;
+                                            vertical-stretch: 1;
+                                            visible: root.install-plan-summary != "";
+
+                                            VerticalBox {
+                                                padding: 12px;
+                                                spacing: 8px;
+
+                                                Text {
+                                                    text: root.install-plan-summary;
+                                                    color: #3d4f6b;
+                                                }
+                                                Text {
+                                                    text: root.install-log;
+                                                    color: #4c5d78;
+                                                    visible: root.install-log != "";
+                                                }
+                                            }
+                                        }
+                                    }
+
                                     Text {
                                         text: "Content for this step will appear here.";
                                         horizontal-alignment: center;
                                         vertical-alignment: center;
                                         color: #7a889f;
-                                        visible: root.current-step-index != 4;
+                                        visible: root.current-step-index != 4
+                                                 && root.current-step-index != root.total-steps - 1;
                                     }
                                 }
                             }
@@ -244,16 +295,31 @@ export component AppWindow inherits Window {
                 spacing: 12px;
                 Button {
                     text: "Cancel";
+                    enabled: !root.installing;
                     clicked => root.request-cancel();
                 }
                 Rectangle { width: 0; horizontal-stretch: 1; }
                 Button {
                     text: "Back";
-                    enabled: root.can-go-back();
+                    enabled: root.can-go-back() && !root.installing;
                     clicked => root.request-back();
                 }
                 Button {
-                    text: root.can-go-next() ? "Next" : "Install";
+                    text: "View Plan";
+                    visible: root.is-final-step();
+                    enabled: root.install-plan-summary == "" && !root.installing;
+                    clicked => root.request-next();
+                }
+                Button {
+                    text: "Run Install";
+                    visible: root.is-final-step();
+                    enabled: root.install-plan-summary != "" && !root.installing;
+                    clicked => root.request-next();
+                }
+                Button {
+                    text: "Next";
+                    visible: !root.is-final-step();
+                    enabled: !root.installing;
                     clicked => root.request-next();
                 }
             }

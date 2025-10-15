@@ -10,9 +10,9 @@ pub mod tasks;
 
 use std::sync::Arc;
 
-use anyhow::Result;
+use anyhow::{Context, Result};
 use parking_lot::RwLock;
-use tracing::info;
+use tracing::{error, info};
 
 use crate::state::{DiskIdentifier, InstallerState};
 use command::{CommandExecutor, SystemCommandExecutor};
@@ -51,6 +51,57 @@ impl Backend {
         }
 
         Ok(plan)
+    }
+
+    pub fn execute_plan_stream<F>(&self, plan: InstallPlan, mut on_log: F) -> Result<bool>
+    where
+        F: FnMut(String),
+    {
+        let mut success = true;
+
+        for step in plan.steps() {
+            on_log(format!("== {:?} ==\n{}", step.stage, step.summary));
+
+            for command in &step.commands {
+                on_log(format!("$ {} {}", command.program, command.args.join(" ")));
+
+                match self
+                    .executor
+                    .run(command)
+                    .with_context(|| format!("failed to run {}", command.program))
+                {
+                    Ok(output) => {
+                        for line in output.stdout.lines().filter(|l| !l.trim().is_empty()) {
+                            on_log(line.to_string());
+                        }
+                        for line in output.stderr.lines().filter(|l| !l.trim().is_empty()) {
+                            on_log(format!("stderr: {line}"));
+                        }
+
+                        if !output.success() {
+                            success = false;
+                            on_log(format!(
+                                "command exited with status {:?}",
+                                output.status.code()
+                            ));
+                            break;
+                        }
+                    }
+                    Err(err) => {
+                        success = false;
+                        error!("command failed: {:#}", err);
+                        on_log(format!("error: {err:#}"));
+                        break;
+                    }
+                }
+            }
+
+            if !success {
+                break;
+            }
+        }
+
+        Ok(success)
     }
 }
 

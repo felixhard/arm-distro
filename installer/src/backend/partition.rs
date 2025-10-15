@@ -24,6 +24,30 @@ pub struct PartitionCommandPlan {
     pub commands: Vec<CommandSpec>,
 }
 
+pub fn default_plan_for_disk(disk: &DiskIdentifier) -> DiskPlan {
+    let boot_partition = PartitionSpec {
+        id: "esp".into(),
+        mountpoint: Some("/boot/efi".into()),
+        filesystem: FileSystem::Fat32,
+        size: PartitionSize::ExactBytes(512 * 1024 * 1024),
+        flags: vec![PartitionFlag::Esp, PartitionFlag::Boot],
+    };
+
+    let root_partition = PartitionSpec {
+        id: "root".into(),
+        mountpoint: Some("/".into()),
+        filesystem: FileSystem::Ext4,
+        size: PartitionSize::Remainder,
+        flags: Vec::new(),
+    };
+
+    DiskPlan {
+        target: disk.clone(),
+        mode: DiskMode::UseEntireDisk,
+        partitions: vec![boot_partition, root_partition],
+    }
+}
+
 pub fn build_command_plan(plan: &DiskPlan) -> Result<PartitionCommandPlan> {
     let mut commands = Vec::new();
     let disk_path = plan.target.path.clone();

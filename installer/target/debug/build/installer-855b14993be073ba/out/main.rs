@@ -8,9 +8,9 @@ mod slint_generatedAppWindow {
      # [derive (Default , PartialEq , Debug , Clone)] pub struct r#StepData {
          pub r#subtitle : sp :: SharedString , pub r#title : sp :: SharedString }
      const _THE_SAME_VERSION_MUST_BE_USED_FOR_THE_COMPILER_AND_THE_RUNTIME : slint :: VersionCheck_1_13_1 = slint :: VersionCheck_1_13_1 ;
-     # [derive (sp :: FieldOffsets , Default)] # [const_field_offset (sp :: const_field_offset)] # [repr (C)] # [pin] struct InnerCupertinoPalette_109 {
+     # [derive (sp :: FieldOffsets , Default)] # [const_field_offset (sp :: const_field_offset)] # [repr (C)] # [pin] struct InnerCupertinoPalette_126 {
          r#background : sp :: Property < slint :: Brush > , r#color_scheme : sp :: Property < sp :: r#ColorScheme > , r#dark_color_scheme : sp :: Property < bool > , globals : sp :: OnceCell < sp :: Weak < SharedGlobals >> , }
-     impl InnerCupertinoPalette_109 {
+     impl InnerCupertinoPalette_126 {
          fn new () -> :: core :: pin :: Pin < sp :: Rc < Self >> {
              sp :: Rc :: pin (Self :: default ()) }
          fn init (self : :: core :: pin :: Pin < sp :: Rc < Self >> , globals : & sp :: Rc < SharedGlobals >) {
@@ -19,10 +19,10 @@ mod slint_generatedAppWindow {
              let _self = self_rc . as_ref () ;
              {
                  slint :: private_unstable_api :: set_property_binding ({
-                     * & InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#background }
+                     * & InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#background }
                  . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . upgrade () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . upgrade () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4280690214f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4293980400f64) as u32) }
@@ -31,7 +31,7 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding ({
-                     * & InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#color_scheme }
+                     * & InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#color_scheme }
                  . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_ref () ;
                      (sp :: WindowInner :: from_pub (& _self . globals . get () . unwrap () . upgrade () . unwrap () . window_adapter_impl () . window ()) . color_scheme ()) as _ }
@@ -39,13 +39,13 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding ({
-                     * & InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme }
+                     * & InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme }
                  . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_ref () ;
                      ({
-                         let r#tmp_CupertinoPalette_109_color_scheme = InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#color_scheme . apply_pin (_self . globals . get () . unwrap () . upgrade () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () ;
-                         if ! (((r#tmp_CupertinoPalette_109_color_scheme . clone ())) == ((sp :: r#ColorScheme :: r#Unknown))) {
-                             ((((r#tmp_CupertinoPalette_109_color_scheme . clone ())) == ((sp :: r#ColorScheme :: r#Dark)))) as _ }
+                         let r#tmp_CupertinoPalette_126_color_scheme = InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#color_scheme . apply_pin (_self . globals . get () . unwrap () . upgrade () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () ;
+                         if ! (((r#tmp_CupertinoPalette_126_color_scheme . clone ())) == ((sp :: r#ColorScheme :: r#Unknown))) {
+                             ((((r#tmp_CupertinoPalette_126_color_scheme . clone ())) == ((sp :: r#ColorScheme :: r#Dark)))) as _ }
                          else {
                              ((sp :: WindowInner :: from_pub (& _self . globals . get () . unwrap () . upgrade () . unwrap () . window_adapter_impl () . window ()) . color_scheme ())) == ((sp :: r#ColorScheme :: r#Dark)) }
                          }
@@ -1821,7 +1821,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -1859,7 +1859,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -1882,7 +1882,7 @@ mod slint_generatedAppWindow {
                      * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#thumb_28 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -1894,7 +1894,7 @@ mod slint_generatedAppWindow {
                      * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#thumb_28 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
@@ -2079,7 +2079,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -2117,7 +2117,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -2140,7 +2140,7 @@ mod slint_generatedAppWindow {
                      * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#thumb_35 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -2152,7 +2152,7 @@ mod slint_generatedAppWindow {
                      * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#thumb_35 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
@@ -3203,20 +3203,20 @@ mod slint_generatedAppWindow {
                              * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_state }
                         ) . apply_pin (_self) . get () ;
                          if sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_37_state . clone () as f64) , & (1f64 as f64)) {
-                             (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                             (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                  (sp :: Color :: from_argb_encoded ((4284703590f64) as u32)) as _ }
                              else {
                                  sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
                             )) as _ }
                          else {
                              if sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_37_state . clone () as f64) , & (2f64 as f64)) {
-                                 (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                                 (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                      (sp :: Color :: from_argb_encoded ((4287532691f64) as u32)) as _ }
                                  else {
                                      sp :: Color :: from_argb_encoded ((4287532691f64) as u32) }
                                 )) as _ }
                              else {
-                                 slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                                 slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                      (sp :: Color :: from_argb_encoded ((4284703590f64) as u32)) as _ }
                                  else {
                                      sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
@@ -3470,20 +3470,20 @@ mod slint_generatedAppWindow {
                              * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_state }
                         ) . apply_pin (_self) . get () ;
                          if sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_37_state . clone () as f64) , & (1f64 as f64)) {
-                             (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                             (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                  (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) . transparentize (0.4f64 as f32)) as _ }
                              else {
                                  slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) . transparentize (0.4f64 as f32) }
                             ) as _ }
                          else {
                              if sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_37_state . clone () as f64) , & (3f64 as f64)) {
-                                 (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                                 (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                      (sp :: Color :: from_argb_encoded ((4281494735f64) as u32)) as _ }
                                  else {
                                      sp :: Color :: from_argb_encoded ((4281494735f64) as u32) }
                                 )) as _ }
                              else {
-                                 slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                                 slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                                      (sp :: Color :: from_argb_encoded ((4291940822f64) as u32)) as _ }
                                  else {
                                      sp :: Color :: from_argb_encoded ((4281084974f64) as u32) }
@@ -3525,7 +3525,7 @@ mod slint_generatedAppWindow {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4281494735f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4281494735f64) as u32) }
@@ -4347,7 +4347,7 @@ mod slint_generatedAppWindow {
                      * & InnerComponent__shadow_49 :: FIELD_OFFSETS . r#rectangle_53 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) . transparentize (0.9f64 as f32)) as _ }
                      else {
                          slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) . transparentize (0.9f64 as f32) }
@@ -5215,7 +5215,7 @@ mod slint_generatedAppWindow {
              }
          }
      # [derive (sp :: FieldOffsets , Default)] # [const_field_offset (sp :: const_field_offset)] # [repr (C)] # [pin_drop] pub struct InnerAppWindow {
-         r#root_64 : sp :: r#WindowItem , r#rectangle_65 : sp :: r#Rectangle , r#rectangle_67 : sp :: r#BasicBorderRectangle , r#text_69 : sp :: r#SimpleText , r#empty_70 : sp :: r#Empty , r#rectangle_71 : sp :: r#BasicBorderRectangle , r#text_73 : sp :: r#SimpleText , r#empty_74 : sp :: r#Empty , r#flickable_75 : sp :: r#Flickable , r#flickable_viewport_76 : sp :: r#Empty , r#vertical_bar_visibility_79 : sp :: r#Clip , r#vertical_bar_80 : sp :: r#Rectangle , r#vertical_bar_clip_81 : sp :: r#Clip , r#border_82 : sp :: r#Rectangle , r#thumb_opacity_83 : sp :: r#Opacity , r#thumb_84 : sp :: r#BasicBorderRectangle , r#touch_area_85 : sp :: r#TouchArea , r#horizontal_bar_visibility_86 : sp :: r#Clip , r#horizontal_bar_87 : sp :: r#Rectangle , r#horizontal_bar_clip_88 : sp :: r#Clip , r#border_89 : sp :: r#Rectangle , r#thumb_opacity_90 : sp :: r#Opacity , r#thumb_91 : sp :: r#BasicBorderRectangle , r#touch_area_92 : sp :: r#TouchArea , r#rectangle_93 : sp :: r#BasicBorderRectangle , r#text_95 : sp :: r#SimpleText , r#text_96 : sp :: r#SimpleText , r#rectangle_97 : sp :: r#BasicBorderRectangle , r#_visibility_98 : sp :: r#Clip , r#_visibility_100 : sp :: r#Clip , r#text_101 : sp :: r#SimpleText , r#empty_102 : sp :: r#Empty , r#rectangle_104 : sp :: r#Empty , r#diskcontent_99 : InnerDiskContent_root_13 , r#button_103 : InnerButton_root_37 , r#button_105 : InnerButton_root_37 , r#button_106 : InnerButton_root_37 , r#root_64_current_step_index : sp :: Property < i32 > , r#root_64_current_step_subtitle : sp :: Property < sp :: SharedString > , r#root_64_current_step_title : sp :: Property < sp :: SharedString > , r#root_64_empty_102_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_102_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_102_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_66_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_66_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_66_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_68_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_68_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_68_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_70_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_70_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_70_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_72_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_72_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_72_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_74_horizontal_scrollbar_policy : sp :: Property < sp :: r#ScrollBarPolicy > , r#root_64_empty_74_vertical_scrollbar_policy : sp :: Property < sp :: r#ScrollBarPolicy > , r#root_64_empty_74_visible_height : sp :: Property < sp :: LogicalLength > , r#root_64_empty_74_visible_width : sp :: Property < sp :: LogicalLength > , r#root_64_empty_94_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_94_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_94_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_flickable_viewport_76_y : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_height : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_maximum : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_pad : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_visible : sp :: Property < bool > , r#root_64_horizontal_bar_87_width : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_y : sp :: Property < sp :: LogicalLength > , r#root_64_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_rectangle_97_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_rectangle_97_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_steps : sp :: Property < sp :: ModelRc < r#StepData > > , r#root_64_text_101_min_height : sp :: Property < sp :: LogicalLength > , r#root_64_text_101_min_width : sp :: Property < sp :: LogicalLength > , r#root_64_text_101_preferred_height : sp :: Property < sp :: LogicalLength > , r#root_64_text_101_preferred_width : sp :: Property < sp :: LogicalLength > , r#root_64_text_101_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_height : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_width : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_y : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_height : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_width : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_y : sp :: Property < sp :: LogicalLength > , r#root_64_total_steps : sp :: Property < i32 > , r#root_64_touch_area_85_pressed_value : sp :: Property < sp :: LogicalLength > , r#root_64_touch_area_92_pressed_value : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_height : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_maximum : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_pad : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_visible : sp :: Property < bool > , r#root_64_vertical_bar_80_width : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_scrolled : sp :: Callback < () , () > , r#root_64_request_back : sp :: Callback < () , () > , r#root_64_request_cancel : sp :: Callback < () , () > , r#root_64_request_next : sp :: Callback < () , () > , r#root_64_select_disk : sp :: Callback < (i32 ,) , () > , r#root_64_vertical_bar_80_scrolled : sp :: Callback < () , () > , repeater0 : sp :: Repeater < InnerComponent_stepitem_77 > , self_weak : sp :: OnceCell < sp :: VWeakMapped < sp :: ItemTreeVTable , InnerAppWindow >> , globals : sp :: OnceCell < sp :: Rc < SharedGlobals >> , tree_index : :: core :: cell :: Cell < u32 > , tree_index_of_first_child : :: core :: cell :: Cell < u32 > , }
+         r#root_64 : sp :: r#WindowItem , r#rectangle_65 : sp :: r#Rectangle , r#rectangle_67 : sp :: r#BasicBorderRectangle , r#text_69 : sp :: r#SimpleText , r#empty_70 : sp :: r#Empty , r#rectangle_71 : sp :: r#BasicBorderRectangle , r#text_73 : sp :: r#SimpleText , r#empty_74 : sp :: r#Empty , r#flickable_75 : sp :: r#Flickable , r#flickable_viewport_76 : sp :: r#Empty , r#vertical_bar_visibility_79 : sp :: r#Clip , r#vertical_bar_80 : sp :: r#Rectangle , r#vertical_bar_clip_81 : sp :: r#Clip , r#border_82 : sp :: r#Rectangle , r#thumb_opacity_83 : sp :: r#Opacity , r#thumb_84 : sp :: r#BasicBorderRectangle , r#touch_area_85 : sp :: r#TouchArea , r#horizontal_bar_visibility_86 : sp :: r#Clip , r#horizontal_bar_87 : sp :: r#Rectangle , r#horizontal_bar_clip_88 : sp :: r#Clip , r#border_89 : sp :: r#Rectangle , r#thumb_opacity_90 : sp :: r#Opacity , r#thumb_91 : sp :: r#BasicBorderRectangle , r#touch_area_92 : sp :: r#TouchArea , r#rectangle_93 : sp :: r#BasicBorderRectangle , r#text_95 : sp :: r#SimpleText , r#text_96 : sp :: r#SimpleText , r#rectangle_97 : sp :: r#BasicBorderRectangle , r#_visibility_98 : sp :: r#Clip , r#_visibility_100 : sp :: r#Clip , r#_visibility_102 : sp :: r#Clip , r#text_103 : sp :: r#SimpleText , r#_visibility_104 : sp :: r#Clip , r#_visibility_106 : sp :: r#Clip , r#rectangle_107 : sp :: r#BasicBorderRectangle , r#text_109 : sp :: r#SimpleText , r#_visibility_110 : sp :: r#Clip , r#text_111 : sp :: r#SimpleText , r#_visibility_112 : sp :: r#Clip , r#text_113 : sp :: r#SimpleText , r#empty_114 : sp :: r#Empty , r#rectangle_116 : sp :: r#Empty , r#_visibility_118 : sp :: r#Clip , r#_visibility_120 : sp :: r#Clip , r#_visibility_122 : sp :: r#Clip , r#diskcontent_99 : InnerDiskContent_root_13 , r#button_115 : InnerButton_root_37 , r#button_117 : InnerButton_root_37 , r#button_119 : InnerButton_root_37 , r#button_121 : InnerButton_root_37 , r#button_123 : InnerButton_root_37 , r#root_64_button_119_visible : sp :: Property < bool > , r#root_64_button_121_visible : sp :: Property < bool > , r#root_64_button_123_visible : sp :: Property < bool > , r#root_64_current_step_index : sp :: Property < i32 > , r#root_64_current_step_subtitle : sp :: Property < sp :: SharedString > , r#root_64_current_step_title : sp :: Property < sp :: SharedString > , r#root_64_disk_selection_summary : sp :: Property < sp :: SharedString > , r#root_64_empty_101_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_101_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_101_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_105_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_105_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_105_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_105_visible : sp :: Property < bool > , r#root_64_empty_108_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_108_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_108_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_114_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_114_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_114_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_66_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_66_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_66_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_68_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_68_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_68_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_70_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_70_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_70_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_72_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_72_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_72_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_74_horizontal_scrollbar_policy : sp :: Property < sp :: r#ScrollBarPolicy > , r#root_64_empty_74_vertical_scrollbar_policy : sp :: Property < sp :: r#ScrollBarPolicy > , r#root_64_empty_74_visible_height : sp :: Property < sp :: LogicalLength > , r#root_64_empty_74_visible_width : sp :: Property < sp :: LogicalLength > , r#root_64_empty_94_layout_cache : sp :: Property < sp :: SharedVector < sp :: Coord , > > , r#root_64_empty_94_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_empty_94_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_flickable_viewport_76_y : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_height : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_maximum : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_pad : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_visible : sp :: Property < bool > , r#root_64_horizontal_bar_87_width : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_y : sp :: Property < sp :: LogicalLength > , r#root_64_install_log : sp :: Property < sp :: SharedString > , r#root_64_install_plan_summary : sp :: Property < sp :: SharedString > , r#root_64_installing : sp :: Property < bool > , r#root_64_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_rectangle_107_visible : sp :: Property < bool > , r#root_64_rectangle_93_width : sp :: Property < sp :: LogicalLength > , r#root_64_rectangle_97_layoutinfo_h : sp :: Property < sp :: LayoutInfo > , r#root_64_rectangle_97_layoutinfo_v : sp :: Property < sp :: LayoutInfo > , r#root_64_steps : sp :: Property < sp :: ModelRc < r#StepData > > , r#root_64_text_103_visible : sp :: Property < bool > , r#root_64_text_111_visible : sp :: Property < bool > , r#root_64_text_113_min_height : sp :: Property < sp :: LogicalLength > , r#root_64_text_113_min_width : sp :: Property < sp :: LogicalLength > , r#root_64_text_113_preferred_height : sp :: Property < sp :: LogicalLength > , r#root_64_text_113_preferred_width : sp :: Property < sp :: LogicalLength > , r#root_64_text_113_visible : sp :: Property < bool > , r#root_64_text_113_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_height : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_width : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_84_y : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_height : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_width : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_x : sp :: Property < sp :: LogicalLength > , r#root_64_thumb_91_y : sp :: Property < sp :: LogicalLength > , r#root_64_total_steps : sp :: Property < i32 > , r#root_64_touch_area_85_pressed_value : sp :: Property < sp :: LogicalLength > , r#root_64_touch_area_92_pressed_value : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_height : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_maximum : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_pad : sp :: Property < sp :: LogicalLength > , r#root_64_vertical_bar_80_visible : sp :: Property < bool > , r#root_64_vertical_bar_80_width : sp :: Property < sp :: LogicalLength > , r#root_64_horizontal_bar_87_scrolled : sp :: Callback < () , () > , r#root_64_request_back : sp :: Callback < () , () > , r#root_64_request_cancel : sp :: Callback < () , () > , r#root_64_request_next : sp :: Callback < () , () > , r#root_64_select_disk : sp :: Callback < (i32 ,) , () > , r#root_64_vertical_bar_80_scrolled : sp :: Callback < () , () > , repeater0 : sp :: Repeater < InnerComponent_stepitem_77 > , self_weak : sp :: OnceCell < sp :: VWeakMapped < sp :: ItemTreeVTable , InnerAppWindow >> , globals : sp :: OnceCell < sp :: Rc < SharedGlobals >> , tree_index : :: core :: cell :: Cell < u32 > , tree_index_of_first_child : :: core :: cell :: Cell < u32 > , }
      impl InnerAppWindow {
          fn init (self_rc : sp :: VRcMapped < sp :: ItemTreeVTable , Self > , globals : sp :: Rc < SharedGlobals > , tree_index : u32 , tree_index_of_first_child : u32) {
              # ! [allow (unused)] let _self = self_rc . as_pin_ref () ;
@@ -5235,22 +5235,52 @@ mod slint_generatedAppWindow {
             ) ;
              InnerDiskContent_root_13 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
                  * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 32u32 - 1 , tree_index_of_first_child + 33u32 - 1) ;
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 34u32 - 1 , tree_index_of_first_child + 35u32 - 1) ;
              InnerButton_root_37 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_103 }
-             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 56u32 - 1 , tree_index_of_first_child + 60u32 - 1) ;
+                 * & Self :: FIELD_OFFSETS . r#button_115 }
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 65u32 - 1 , tree_index_of_first_child + 71u32 - 1) ;
              InnerButton_root_37 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_105 }
-             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 58u32 - 1 , tree_index_of_first_child + 68u32 - 1) ;
+                 * & Self :: FIELD_OFFSETS . r#button_117 }
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 67u32 - 1 , tree_index_of_first_child + 79u32 - 1) ;
              InnerButton_root_37 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_106 }
-             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 59u32 - 1 , tree_index_of_first_child + 76u32 - 1) ;
+                 * & Self :: FIELD_OFFSETS . r#button_119 }
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 87u32 - 1 , tree_index_of_first_child + 88u32 - 1) ;
+             InnerButton_root_37 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
+                 * & Self :: FIELD_OFFSETS . r#button_121 }
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 96u32 - 1 , tree_index_of_first_child + 97u32 - 1) ;
+             InnerButton_root_37 :: init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
+                 * & Self :: FIELD_OFFSETS . r#button_123 }
+             . apply_pin (x)) , _self . globals . get () . unwrap () . clone () , tree_index_of_first_child + 105u32 - 1 , tree_index_of_first_child + 106u32 - 1) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64 }
                  + sp :: r#WindowItem :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#background . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get ()) as _ }
+                     (InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#background . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_119_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (_self . r#fn_is_final_step ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_121_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (_self . r#fn_is_final_step ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_123_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! _self . r#fn_is_final_step ())) as _ }
                 ) ;
                  }
              ({
@@ -5268,9 +5298,274 @@ mod slint_generatedAppWindow {
             ) . apply_pin (_self) . set ({
                  (sp :: SharedString :: from ("")) as sp :: SharedString }
             ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("")) as sp :: SharedString }
+            ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layout_cache }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#solve_box_layout (& sp :: BoxLayoutData {
+                         r#alignment : sp :: r#LayoutAlignment :: r#Stretch as _ , r#cells : sp :: Slice :: from_slice (& [{
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = sp :: Item :: layout_info (({
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                            ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 58u32 - 1)) as _ ;
+                             the_struct }
+                        ]) as _ , r#padding : {
+                             let mut the_struct = sp :: Padding :: default () ;
+                             the_struct . r#begin = 16f64 as _ ;
+                             the_struct . r#end = 16f64 as _ ;
+                             the_struct }
+                         as _ , r#size : 360f64 as _ , r#spacing : 12f64 as _ , }
+                     as _ , sp :: Slice :: from_slice (& []) as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layoutinfo_h }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info_ortho (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 58u32 - 1)) as _ ;
+                         the_struct }
+                    ]) as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 16f64 as _ ;
+                         the_struct . r#end = 16f64 as _ ;
+                         the_struct }
+                     as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layoutinfo_v }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 58u32 - 1)) as _ ;
+                         the_struct }
+                    ]) as _ , 12f64 as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 16f64 as _ ;
+                         the_struct . r#end = 16f64 as _ ;
+                         the_struct }
+                     as _ , sp :: r#LayoutAlignment :: r#Stretch as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layout_cache }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#solve_box_layout (& sp :: BoxLayoutData {
+                         r#alignment : sp :: r#LayoutAlignment :: r#Stretch as _ , r#cells : sp :: Slice :: from_slice (& [{
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = {
+                                 let r#layout_info = (({
+                                     let mut the_struct = sp :: LayoutInfo :: default () ;
+                                     the_struct . r#max = 340282346638528860000000000000000000000f64 as _ ;
+                                     the_struct . r#max_percent = 100f64 as _ ;
+                                     the_struct . r#min = 0f64 as _ ;
+                                     the_struct . r#min_percent = 0f64 as _ ;
+                                     the_struct . r#preferred = 0f64 as _ ;
+                                     the_struct . r#stretch = 1f64 as _ ;
+                                     the_struct }
+                                )) + ((({
+                                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layoutinfo_v }
+                                ) . apply_pin (_self) . get ())) ;
+                                 {
+                                     let mut the_struct = sp :: LayoutInfo :: default () ;
+                                     the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                     the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                     the_struct . r#min = (r#layout_info . clone ()) . r#min as _ ;
+                                     the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                     the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                     the_struct . r#stretch = 1f64 as _ ;
+                                     the_struct }
+                                 }
+                             as _ ;
+                             the_struct }
+                        ]) as _ , r#padding : {
+                             let mut the_struct = sp :: Padding :: default () ;
+                             the_struct . r#begin = 16f64 as _ ;
+                             the_struct . r#end = 16f64 as _ ;
+                             the_struct }
+                         as _ , r#size : 360f64 as _ , r#spacing : 12f64 as _ , }
+                     as _ , sp :: Slice :: from_slice (& []) as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layoutinfo_h }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info_ortho (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = ((({
+                             let mut the_struct = sp :: LayoutInfo :: default () ;
+                             the_struct . r#max = 340282346638528860000000000000000000000f64 as _ ;
+                             the_struct . r#max_percent = 100f64 as _ ;
+                             the_struct . r#min = 0f64 as _ ;
+                             the_struct . r#min_percent = 0f64 as _ ;
+                             the_struct . r#preferred = 0f64 as _ ;
+                             the_struct . r#stretch = 1f64 as _ ;
+                             the_struct }
+                        )) + ((({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layoutinfo_h }
+                        ) . apply_pin (_self) . get ()))) as _ ;
+                         the_struct }
+                    ]) as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 16f64 as _ ;
+                         the_struct . r#end = 16f64 as _ ;
+                         the_struct }
+                     as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layoutinfo_v }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = {
+                             let r#layout_info = (({
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = 340282346638528860000000000000000000000f64 as _ ;
+                                 the_struct . r#max_percent = 100f64 as _ ;
+                                 the_struct . r#min = 0f64 as _ ;
+                                 the_struct . r#min_percent = 0f64 as _ ;
+                                 the_struct . r#preferred = 0f64 as _ ;
+                                 the_struct . r#stretch = 1f64 as _ ;
+                                 the_struct }
+                            )) + ((({
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layoutinfo_v }
+                            ) . apply_pin (_self) . get ())) ;
+                             {
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                 the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                 the_struct . r#min = (r#layout_info . clone ()) . r#min as _ ;
+                                 the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                 the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                 the_struct . r#stretch = 1f64 as _ ;
+                                 the_struct }
+                             }
+                         as _ ;
+                         the_struct }
+                    ]) as _ , 12f64 as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 16f64 as _ ;
+                         the_struct . r#end = 16f64 as _ ;
+                         the_struct }
+                     as _ , sp :: r#LayoutAlignment :: r#Stretch as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: ApproxEq :: < f64 > :: approx_eq (& (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_index }
+                    ) . apply_pin (_self) . get () as f64) , & (((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_total_steps }
+                    ) . apply_pin (_self) . get ()) as f64) - ((1f64) as f64) as f64))) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#solve_box_layout (& sp :: BoxLayoutData {
+                         r#alignment : sp :: r#LayoutAlignment :: r#Stretch as _ , r#cells : sp :: Slice :: from_slice (& [{
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = sp :: Item :: layout_info (({
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                            ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 61u32 - 1)) as _ ;
+                             the_struct }
+                         , {
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = sp :: Item :: layout_info (({
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                            ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 63u32 - 1)) as _ ;
+                             the_struct }
+                        ]) as _ , r#padding : {
+                             let mut the_struct = sp :: Padding :: default () ;
+                             the_struct . r#begin = 12f64 as _ ;
+                             the_struct . r#end = 12f64 as _ ;
+                             the_struct }
+                         as _ , r#size : ({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layout_cache }
+                        ) . apply_pin (_self) . get () [1usize] as _ , r#spacing : 8f64 as _ , }
+                     as _ , sp :: Slice :: from_slice (& []) as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layoutinfo_h }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info_ortho (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 61u32 - 1)) as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 63u32 - 1)) as _ ;
+                         the_struct }
+                    ]) as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 12f64 as _ ;
+                         the_struct . r#end = 12f64 as _ ;
+                         the_struct }
+                     as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layoutinfo_v }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: r#box_layout_info (sp :: Slice :: from_slice (& [{
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 61u32 - 1)) as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = sp :: Item :: layout_info (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 63u32 - 1)) as _ ;
+                         the_struct }
+                    ]) as _ , 8f64 as _ , & {
+                         let mut the_struct = sp :: Padding :: default () ;
+                         the_struct . r#begin = 12f64 as _ ;
+                         the_struct . r#end = 12f64 as _ ;
+                         the_struct }
+                     as _ , sp :: r#LayoutAlignment :: r#Stretch as _)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: r#solve_box_layout (& sp :: BoxLayoutData {
@@ -5278,7 +5573,7 @@ mod slint_generatedAppWindow {
                              let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                              the_struct . r#constraint = {
                                  let r#layout_info = ({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                                 ) . apply_pin (_self) . get () ;
@@ -5287,7 +5582,7 @@ mod slint_generatedAppWindow {
                                      the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                      the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                      the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                         InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                         InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                                      + {
                                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                     ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5302,8 +5597,8 @@ mod slint_generatedAppWindow {
                              let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                              the_struct . r#constraint = {
                                  let r#layout_info = sp :: Item :: layout_info (({
-                                     * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_104 }
-                                ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 57u32 - 1)) ;
+                                     * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_116 }
+                                ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 66u32 - 1)) ;
                                  {
                                      let mut the_struct = sp :: LayoutInfo :: default () ;
                                      the_struct . r#max = 0f64 as _ ;
@@ -5320,7 +5615,7 @@ mod slint_generatedAppWindow {
                              let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                              the_struct . r#constraint = {
                                  let r#layout_info = ({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                                 ) . apply_pin (_self) . get () ;
@@ -5329,7 +5624,7 @@ mod slint_generatedAppWindow {
                                      the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                      the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                      the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                         InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                         InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                                      + {
                                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                     ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5344,7 +5639,7 @@ mod slint_generatedAppWindow {
                              let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                              the_struct . r#constraint = {
                                  let r#layout_info = ({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                                 ) . apply_pin (_self) . get () ;
@@ -5353,7 +5648,55 @@ mod slint_generatedAppWindow {
                                      the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                      the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                      the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                         InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                         InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+                                     + {
+                                         * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
+                                    ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                     the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                     the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                     the_struct . r#stretch = 0f64 as _ ;
+                                     the_struct }
+                                 }
+                             as _ ;
+                             the_struct }
+                         , {
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = {
+                                 let r#layout_info = ({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
+                                ) . apply_pin (_self) . get () ;
+                                 {
+                                     let mut the_struct = sp :: LayoutInfo :: default () ;
+                                     the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                     the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                     the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                         InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                                     + {
+                                         * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
+                                    ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                     the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                     the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                     the_struct . r#stretch = 0f64 as _ ;
+                                     the_struct }
+                                 }
+                             as _ ;
+                             the_struct }
+                         , {
+                             let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                             the_struct . r#constraint = {
+                                 let r#layout_info = ({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
+                                ) . apply_pin (_self) . get () ;
+                                 {
+                                     let mut the_struct = sp :: LayoutInfo :: default () ;
+                                     the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                     the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                     the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                         InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
                                      + {
                                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                     ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5375,14 +5718,14 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layoutinfo_h }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layoutinfo_h }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: r#box_layout_info (sp :: Slice :: from_slice (& [{
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                             ) . apply_pin (_self) . get () ;
@@ -5391,7 +5734,7 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5406,8 +5749,8 @@ mod slint_generatedAppWindow {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = sp :: Item :: layout_info (({
-                                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_104 }
-                            ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 57u32 - 1)) ;
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_116 }
+                            ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 66u32 - 1)) ;
                              {
                                  let mut the_struct = sp :: LayoutInfo :: default () ;
                                  the_struct . r#max = 0f64 as _ ;
@@ -5424,7 +5767,7 @@ mod slint_generatedAppWindow {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                             ) . apply_pin (_self) . get () ;
@@ -5433,7 +5776,7 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5448,7 +5791,7 @@ mod slint_generatedAppWindow {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
                             ) . apply_pin (_self) . get () ;
@@ -5457,7 +5800,55 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
+                                ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                 the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                 the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                 the_struct . r#stretch = 0f64 as _ ;
+                                 the_struct }
+                             }
+                         as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = {
+                             let r#layout_info = ({
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                             + {
+                                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
+                            ) . apply_pin (_self) . get () ;
+                             {
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                 the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                 the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
+                                ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                 the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                 the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                 the_struct . r#stretch = 0f64 as _ ;
+                                 the_struct }
+                             }
+                         as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = {
+                             let r#layout_info = ({
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                             + {
+                                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_h }
+                            ) . apply_pin (_self) . get () ;
+                             {
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                 the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                 the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_h }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5478,14 +5869,14 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layoutinfo_v }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layoutinfo_v }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: r#box_layout_info_ortho (sp :: Slice :: from_slice (& [{
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_v }
                             ) . apply_pin (_self) . get () ;
@@ -5494,7 +5885,7 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_v }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5508,14 +5899,14 @@ mod slint_generatedAppWindow {
                      , {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = sp :: Item :: layout_info (({
-                             * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_104 }
-                        ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 57u32 - 1)) as _ ;
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_116 }
+                        ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 66u32 - 1)) as _ ;
                          the_struct }
                      , {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_v }
                             ) . apply_pin (_self) . get () ;
@@ -5524,7 +5915,7 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_v }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5539,7 +5930,7 @@ mod slint_generatedAppWindow {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = {
                              let r#layout_info = ({
-                                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                              + {
                                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_v }
                             ) . apply_pin (_self) . get () ;
@@ -5548,7 +5939,55 @@ mod slint_generatedAppWindow {
                                  the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
                                  the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
                                  the_struct . r#min = (20f64 as sp :: Coord) . max ((({
-                                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_v }
+                                ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                 the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                 the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                 the_struct . r#stretch = 0f64 as _ ;
+                                 the_struct }
+                             }
+                         as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = {
+                             let r#layout_info = ({
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                             + {
+                                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_v }
+                            ) . apply_pin (_self) . get () ;
+                             {
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                 the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                 the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                                 + {
+                                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_v }
+                                ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
+                                 the_struct . r#min_percent = (r#layout_info . clone ()) . r#min_percent as _ ;
+                                 the_struct . r#preferred = (r#layout_info . clone ()) . r#preferred as _ ;
+                                 the_struct . r#stretch = 0f64 as _ ;
+                                 the_struct }
+                             }
+                         as _ ;
+                         the_struct }
+                     , {
+                         let mut the_struct = sp :: BoxLayoutCellData :: default () ;
+                         the_struct . r#constraint = {
+                             let r#layout_info = ({
+                                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                             + {
+                                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_layoutinfo_v }
+                            ) . apply_pin (_self) . get () ;
+                             {
+                                 let mut the_struct = sp :: LayoutInfo :: default () ;
+                                 the_struct . r#max = (r#layout_info . clone ()) . r#max as _ ;
+                                 the_struct . r#max_percent = (r#layout_info . clone ()) . r#max_percent as _ ;
+                                 the_struct . r#min = (20f64 as sp :: Coord) . max ((({
+                                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
                                  + {
                                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_i_layout_55_layoutinfo_v }
                                 ) . apply_pin (_self) . get ()) . r#min as sp :: Coord) as _ ;
@@ -5591,7 +6030,7 @@ mod slint_generatedAppWindow {
                          , {
                              let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                              the_struct . r#constraint = ({
-                                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layoutinfo_v }
+                                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layoutinfo_v }
                             ) . apply_pin (_self) . get () as _ ;
                              the_struct }
                         ]) as _ , r#padding : {
@@ -5626,7 +6065,7 @@ mod slint_generatedAppWindow {
                      , {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = ({
-                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layoutinfo_h }
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layoutinfo_h }
                         ) . apply_pin (_self) . get () as _ ;
                          the_struct }
                     ]) as _ , & {
@@ -5660,7 +6099,7 @@ mod slint_generatedAppWindow {
                      , {
                          let mut the_struct = sp :: BoxLayoutCellData :: default () ;
                          the_struct . r#constraint = ({
-                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layoutinfo_v }
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layoutinfo_v }
                         ) . apply_pin (_self) . get () as _ ;
                          the_struct }
                     ]) as _ , 24f64 as _ , & {
@@ -6309,6 +6748,21 @@ mod slint_generatedAppWindow {
                     ) . apply_pin (_self) . get () . get ()) as f64)) as sp :: Coord)) as _ }
                 ) ;
                  }
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("")) as sp :: SharedString }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("")) as sp :: SharedString }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+            ) . apply_pin (_self) . set ({
+                 (false) as bool }
+            ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_layoutinfo_h }
@@ -6353,10 +6807,30 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_rectangle_107_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+                    ) . apply_pin (_self) . get ())) != ((sp :: SharedString :: from (""))))) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_rectangle_93_width }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_rectangle_97_layoutinfo_h }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (((({
+                     (((((((({
                          let mut the_struct = sp :: LayoutInfo :: default () ;
                          the_struct . r#max = 340282346638528860000000000000000000000f64 as _ ;
                          the_struct . r#max_percent = 100f64 as _ ;
@@ -6365,9 +6839,13 @@ mod slint_generatedAppWindow {
                          the_struct . r#preferred = 0f64 as _ ;
                          the_struct . r#stretch = 1f64 as _ ;
                          the_struct }
-                    )) + ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1)))))) as _ }
+                    )) + ((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layoutinfo_h }
+                    ) . apply_pin (_self) . get ())))) + ((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layoutinfo_h }
+                    ) . apply_pin (_self) . get ())))) + ((sp :: Item :: layout_info (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1)))))) as _ }
                 ) ;
                  }
              {
@@ -6375,7 +6853,7 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_rectangle_97_layoutinfo_v }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (((({
+                     (((((((({
                          let mut the_struct = sp :: LayoutInfo :: default () ;
                          the_struct . r#max = 340282346638528860000000000000000000000f64 as _ ;
                          the_struct . r#max_percent = 100f64 as _ ;
@@ -6384,9 +6862,13 @@ mod slint_generatedAppWindow {
                          the_struct . r#preferred = 0f64 as _ ;
                          the_struct . r#stretch = 1f64 as _ ;
                          the_struct }
-                    )) + ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1)))))) as _ }
+                    )) + ((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layoutinfo_v }
+                    ) . apply_pin (_self) . get ())))) + ((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layoutinfo_v }
+                    ) . apply_pin (_self) . get ())))) + ((sp :: Item :: layout_info (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1)))))) as _ }
                 ) ;
                  }
              {
@@ -6399,53 +6881,88 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_min_height }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_103_visible }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1))) . r#min as sp :: Coord)) as _ }
+                     ((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+                    ) . apply_pin (_self) . get ())) != ((sp :: SharedString :: from (""))))) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_min_width }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_111_visible }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1))) . r#min as sp :: Coord)) as _ }
+                     ((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+                    ) . apply_pin (_self) . get ())) != ((sp :: SharedString :: from (""))))) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_preferred_height }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_min_height }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1))) . r#preferred as sp :: Coord)) as _ }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1))) . r#min as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_preferred_width }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_min_width }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 55u32 - 1))) . r#preferred as sp :: Coord)) as _ }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1))) . r#min as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_x }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_preferred_height }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Vertical , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1))) . r#preferred as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_preferred_width }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((sp :: Item :: layout_info (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                    ) . apply_pin (_self) , sp :: Orientation :: Horizontal , & _self . globals . get () . unwrap () . window_adapter_impl () , & & sp :: ItemRc :: new (sp :: VRcMapped :: origin (& _self . self_weak . get () . unwrap () . upgrade () . unwrap ()) , _self . tree_index_of_first_child . get () + 64u32 - 1))) . r#preferred as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_visible }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ({
+                         let r#tmp_root_64_current_step_index = ({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_index }
+                        ) . apply_pin (_self) . get () ;
+                         ((! sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_64_current_step_index . clone () as f64) , & (4f64 as f64)))) && ((! sp :: ApproxEq :: < f64 > :: approx_eq (& (r#tmp_root_64_current_step_index . clone () as f64) , & (((({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_total_steps }
+                        ) . apply_pin (_self) . get ()) as f64) - ((1f64) as f64) as f64)))) }
+                    ) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_x }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new ((((((((((({
                          * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
                     ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
                      + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) . get () . get ()) as f64)) as f64) / ((2f64) as f64)) as sp :: Coord)) as _ }
                 ) ;
                  }
@@ -6925,7 +7442,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -6963,7 +7480,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -6986,7 +7503,7 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#thumb_84 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -6998,7 +7515,7 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#thumb_84 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
@@ -7183,7 +7700,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -7221,7 +7738,7 @@ mod slint_generatedAppWindow {
                      else {
                          0f64 }
                      as f64) , & (1f64 as f64)) {
-                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                         (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                              (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                          else {
                              sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -7244,7 +7761,7 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#thumb_91 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4294111991f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4280032286f64) as u32) }
@@ -7256,7 +7773,7 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#thumb_91 }
                  + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_109 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_109 . as_ref ()) . get () {
+                     (slint :: Brush :: SolidColor (if InnerCupertinoPalette_126 :: FIELD_OFFSETS . r#dark_color_scheme . apply_pin (_self . globals . get () . unwrap () . global_CupertinoPalette_126 . as_ref ()) . get () {
                          (sp :: Color :: from_argb_encoded ((4280032286f64) as u32)) as _ }
                      else {
                          sp :: Color :: from_argb_encoded ((4294111991f64) as u32) }
@@ -7587,58 +8104,233 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_100 }
                  + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     ((! ! sp :: ApproxEq :: < f64 > :: approx_eq (& (({
+                     ((! sp :: ApproxEq :: < f64 > :: approx_eq (& (({
                          * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_index }
                     ) . apply_pin (_self) . get () as f64) , & (4f64 as f64)))) as _ }
                 ) ;
                  }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_103_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set ({
+                 (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4282208107f64) as u32))) as slint :: Brush }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layout_cache }
+                    ) . apply_pin (_self) . get () [1usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+                    ) . apply_pin (_self) . get ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((((((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_rectangle_107_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) . set ({
+                 (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4294967295f64) as u32))) as slint :: Brush }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) . set ({
+                 (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4292204515f64) as u32))) as slint :: Brush }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_radius) . apply_pin (_self) . set ({
+                 (sp :: LogicalLength :: new (6f64 as sp :: Coord)) as sp :: LogicalLength }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set ({
+                 (sp :: LogicalLength :: new (1f64 as sp :: Coord)) as sp :: LogicalLength }
+            ) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set ({
+                 (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4282208107f64) as u32))) as slint :: Brush }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                    ) . apply_pin (_self) . get () [1usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+                    ) . apply_pin (_self) . get ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((((((((((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_111_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set ({
+                 (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4283194744f64) as u32))) as slint :: Brush }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+                    ) . apply_pin (_self) . get ()) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((((((((((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set ({
                  (slint :: Brush :: SolidColor (sp :: Color :: from_argb_encoded ((4286220447f64) as u32))) as slint :: Brush }
             ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
                  + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new ((({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_preferred_height }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_preferred_height }
                     ) . apply_pin (_self) . get () . get () as sp :: Coord) . max (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_min_height }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_min_height }
                     ) . apply_pin (_self) . get () . get () as sp :: Coord) as sp :: Coord)) as _ }
                 ) ;
                  }
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#horizontal_alignment) . apply_pin (_self) . set ({
                  (sp :: r#TextHorizontalAlignment :: r#Center) as sp :: r#TextHorizontalAlignment }
             ) ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) . set ({
                  (sp :: SharedString :: from ("Content for this step will appear here.")) as sp :: SharedString }
             ) ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#vertical_alignment) . apply_pin (_self) . set ({
                  (sp :: r#TextVerticalAlignment :: r#Center) as sp :: r#TextVerticalAlignment }
             ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
                  + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new ((({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_preferred_width }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_preferred_width }
                     ) . apply_pin (_self) . get () . get () as sp :: Coord) . max (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_min_width }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_min_width }
                     ) . apply_pin (_self) . get () . get () as sp :: Coord) as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  # [allow (unreachable_code , unused)] slint :: private_unstable_api :: set_callback_handler (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_clicked }
                 ) . apply_pin (_self) , & self_rc , {
@@ -7653,7 +8345,19 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_height }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
@@ -7664,7 +8368,7 @@ mod slint_generatedAppWindow {
                 ) ;
                  }
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
             ) . apply_pin (_self) . set ({
@@ -7672,30 +8376,30 @@ mod slint_generatedAppWindow {
             ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_width }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [1usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_x }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [0usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set ({
@@ -7703,7 +8407,7 @@ mod slint_generatedAppWindow {
             ) ;
              {
                  # [allow (unreachable_code , unused)] slint :: private_unstable_api :: set_callback_handler (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_clicked }
                 ) . apply_pin (_self) , & self_rc , {
@@ -7718,17 +8422,19 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
                  + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
-                     (_self . r#fn_can_go_back ()) as _ }
+                     ((((_self . r#fn_can_go_back ())) && ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+                    ) . apply_pin (_self) . get ())))) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_height }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
@@ -7739,7 +8445,7 @@ mod slint_generatedAppWindow {
                 ) ;
                  }
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
             ) . apply_pin (_self) . set ({
@@ -7747,38 +8453,48 @@ mod slint_generatedAppWindow {
             ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_width }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [5usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_x }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [4usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set ({
                  (sp :: LogicalLength :: new (12f64 as sp :: Coord)) as sp :: LogicalLength }
             ) ;
              {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_119_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
                  # [allow (unreachable_code , unused)] slint :: private_unstable_api :: set_callback_handler (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_clicked }
                 ) . apply_pin (_self) , & self_rc , {
@@ -7793,7 +8509,21 @@ mod slint_generatedAppWindow {
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+                    ) . apply_pin (_self) . get ())) == ((sp :: SharedString :: from (""))))) && ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+                    ) . apply_pin (_self) . get ())))) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_height }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
@@ -7803,46 +8533,215 @@ mod slint_generatedAppWindow {
                     ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord)) as _ }
                 ) ;
                  }
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("View Plan")) as sp :: SharedString }
+            ) ;
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
-                 + {
-                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
-                ) . apply_pin (_self) , & self_rc , move | self_rc | {
-                     let _self = self_rc . as_pin_ref () ;
-                     (if _self . r#fn_can_go_next () {
-                         (sp :: SharedString :: from ("Next")) as _ }
-                     else {
-                         sp :: SharedString :: from ("Install") }
-                    ) as _ }
-                ) ;
-                 }
-             {
-                 slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_width }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [7usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              {
                  slint :: private_unstable_api :: set_property_binding (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_x }
                 ) . apply_pin (_self) , & self_rc , move | self_rc | {
                      let _self = self_rc . as_pin_ref () ;
                      (sp :: LogicalLength :: new (({
-                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                     ) . apply_pin (_self) . get () [6usize] as sp :: Coord)) as _ }
                 ) ;
                  }
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
+            ) . apply_pin (_self) . set ({
+                 (sp :: LogicalLength :: new (12f64 as sp :: Coord)) as sp :: LogicalLength }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_121_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
+                 # [allow (unreachable_code , unused)] slint :: private_unstable_api :: set_callback_handler (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_clicked }
+                ) . apply_pin (_self) , & self_rc , {
+                     move | self_rc , args | {
+                         let _self = self_rc . as_pin_ref () ;
+                         (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_request_next }
+                        ) . apply_pin (_self) . call (& ())) ;
+                         }
+                     }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+                    ) . apply_pin (_self) . get ())) != ((sp :: SharedString :: from (""))))) && ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+                    ) . apply_pin (_self) . get ())))) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_height }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord)) as _ }
+                ) ;
+                 }
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("Run Install")) as sp :: SharedString }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_width }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                    ) . apply_pin (_self) . get () [9usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_x }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                    ) . apply_pin (_self) . get () [8usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
+            ) . apply_pin (_self) . set ({
+                 (sp :: LogicalLength :: new (12f64 as sp :: Coord)) as sp :: LogicalLength }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+                 + sp :: r#Clip :: FIELD_OFFSETS . r#clip) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_button_123_visible }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
+                 # [allow (unreachable_code , unused)] slint :: private_unstable_api :: set_callback_handler (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_clicked }
+                ) . apply_pin (_self) , & self_rc , {
+                     move | self_rc , args | {
+                         let _self = self_rc . as_pin_ref () ;
+                         (({
+                             * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_request_next }
+                        ) . apply_pin (_self) . call (& ())) ;
+                         }
+                     }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     ((! ({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+                    ) . apply_pin (_self) . get ())) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_height }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new ((((((({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
+                    ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord)) as _ }
+                ) ;
+                 }
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set ({
+                 (sp :: SharedString :: from ("Next")) as sp :: SharedString }
+            ) ;
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_width }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                    ) . apply_pin (_self) . get () [11usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             {
+                 slint :: private_unstable_api :: set_property_binding (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_x }
+                ) . apply_pin (_self) , & self_rc , move | self_rc | {
+                     let _self = self_rc . as_pin_ref () ;
+                     (sp :: LogicalLength :: new (({
+                         * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                    ) . apply_pin (_self) . get () [10usize] as sp :: Coord)) as _ }
+                ) ;
+                 }
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set ({
@@ -8111,60 +9010,272 @@ mod slint_generatedAppWindow {
                  * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_100 }
              + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set_constant () ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_size) . apply_pin (_self) . set_constant () ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_weight) . apply_pin (_self) . set_constant () ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#horizontal_alignment) . apply_pin (_self) . set_constant () ;
              ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-             + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) . set_constant () ;
-             ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
              + sp :: r#SimpleText :: FIELD_OFFSETS . r#vertical_alignment) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#background) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_color) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+             + sp :: r#BasicBorderRectangle :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_size) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_weight) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#horizontal_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#vertical_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_size) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_weight) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#horizontal_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#vertical_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#color) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_size) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#font_weight) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#horizontal_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#text) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+             + sp :: r#SimpleText :: FIELD_OFFSETS . r#vertical_alignment) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_icon }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_icon }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_icon }
             ) . apply_pin (_self) . set_constant () ;
              ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_icon }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_bottom_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_left_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_top_right_radius) . apply_pin (_self) . set_constant () ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+             + sp :: r#Clip :: FIELD_OFFSETS . r#border_width) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_icon }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+            ) . apply_pin (_self) . set_constant () ;
+             ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_y }
             ) . apply_pin (_self) . set_constant () ;
@@ -8175,13 +9286,19 @@ mod slint_generatedAppWindow {
                  * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
              . apply_pin (x)) ,) ;
              InnerButton_root_37 :: user_init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_103 }
+                 * & Self :: FIELD_OFFSETS . r#button_115 }
              . apply_pin (x)) ,) ;
              InnerButton_root_37 :: user_init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_105 }
+                 * & Self :: FIELD_OFFSETS . r#button_117 }
              . apply_pin (x)) ,) ;
              InnerButton_root_37 :: user_init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
-                 * & Self :: FIELD_OFFSETS . r#button_106 }
+                 * & Self :: FIELD_OFFSETS . r#button_119 }
+             . apply_pin (x)) ,) ;
+             InnerButton_root_37 :: user_init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
+                 * & Self :: FIELD_OFFSETS . r#button_121 }
+             . apply_pin (x)) ,) ;
+             InnerButton_root_37 :: user_init (sp :: VRcMapped :: map (self_rc . clone () , | x | {
+                 * & Self :: FIELD_OFFSETS . r#button_123 }
              . apply_pin (x)) ,) ;
              {
                  }
@@ -8201,6 +9318,15 @@ mod slint_generatedAppWindow {
                  ;
                  {
                      }
+                 }
+             ;
+             {
+                 }
+             ;
+             {
+                 }
+             ;
+             {
                  }
              ;
              {
@@ -8234,16 +9360,24 @@ mod slint_generatedAppWindow {
                      . apply_pin (_self) . visit_dynamic_children (dyn_index - 1u32 , order , visitor) }
                  2u32 ..= 5u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_103 }
+                         * & Self :: FIELD_OFFSETS . r#button_115 }
                      . apply_pin (_self) . visit_dynamic_children (dyn_index - 2u32 , order , visitor) }
                  6u32 ..= 9u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_105 }
+                         * & Self :: FIELD_OFFSETS . r#button_117 }
                      . apply_pin (_self) . visit_dynamic_children (dyn_index - 6u32 , order , visitor) }
                  10u32 ..= 13u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_106 }
+                         * & Self :: FIELD_OFFSETS . r#button_119 }
                      . apply_pin (_self) . visit_dynamic_children (dyn_index - 10u32 , order , visitor) }
+                 14u32 ..= 17u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_121 }
+                     . apply_pin (_self) . visit_dynamic_children (dyn_index - 14u32 , order , visitor) }
+                 18u32 ..= 21u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_123 }
+                     . apply_pin (_self) . visit_dynamic_children (dyn_index - 18u32 , order , visitor) }
                  _ => panic ! ("invalid dyn_index {}" , dyn_index) , }
              }
          fn layout_info (self : :: core :: pin :: Pin < & Self > , orientation : sp :: Orientation) -> sp :: LayoutInfo {
@@ -8303,16 +9437,24 @@ mod slint_generatedAppWindow {
                      . apply_pin (_self) . subtree_range (dyn_index - 1u32) }
                  2u32 ..= 5u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_103 }
+                         * & Self :: FIELD_OFFSETS . r#button_115 }
                      . apply_pin (_self) . subtree_range (dyn_index - 2u32) }
                  6u32 ..= 9u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_105 }
+                         * & Self :: FIELD_OFFSETS . r#button_117 }
                      . apply_pin (_self) . subtree_range (dyn_index - 6u32) }
                  10u32 ..= 13u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_106 }
+                         * & Self :: FIELD_OFFSETS . r#button_119 }
                      . apply_pin (_self) . subtree_range (dyn_index - 10u32) }
+                 14u32 ..= 17u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_121 }
+                     . apply_pin (_self) . subtree_range (dyn_index - 14u32) }
+                 18u32 ..= 21u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_123 }
+                     . apply_pin (_self) . subtree_range (dyn_index - 18u32) }
                  _ => panic ! ("invalid dyn_index {}" , dyn_index) , }
              }
          fn subtree_component (self : :: core :: pin :: Pin < & Self > , dyn_index : u32 , subtree_index : usize , result : & mut sp :: ItemTreeWeak) {
@@ -8342,16 +9484,24 @@ mod slint_generatedAppWindow {
                      . apply_pin (_self) . subtree_component (dyn_index - 1u32 , subtree_index , result) }
                  2u32 ..= 5u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_103 }
+                         * & Self :: FIELD_OFFSETS . r#button_115 }
                      . apply_pin (_self) . subtree_component (dyn_index - 2u32 , subtree_index , result) }
                  6u32 ..= 9u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_105 }
+                         * & Self :: FIELD_OFFSETS . r#button_117 }
                      . apply_pin (_self) . subtree_component (dyn_index - 6u32 , subtree_index , result) }
                  10u32 ..= 13u32 => {
                      {
-                         * & Self :: FIELD_OFFSETS . r#button_106 }
+                         * & Self :: FIELD_OFFSETS . r#button_119 }
                      . apply_pin (_self) . subtree_component (dyn_index - 10u32 , subtree_index , result) }
+                 14u32 ..= 17u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_121 }
+                     . apply_pin (_self) . subtree_component (dyn_index - 14u32 , subtree_index , result) }
+                 18u32 ..= 21u32 => {
+                     {
+                         * & Self :: FIELD_OFFSETS . r#button_123 }
+                     . apply_pin (_self) . subtree_component (dyn_index - 18u32 , subtree_index , result) }
                  _ => panic ! ("invalid dyn_index {}" , dyn_index) , }
              ;
              }
@@ -8477,69 +9627,117 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
                 ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord , 16f64 as sp :: Coord , ({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_94_layout_cache }
-                ) . apply_pin (_self) . get () [4usize] as sp :: Coord ,) , 30u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 31u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 32u32 => (360f64 as sp :: Coord , (((((({
+                ) . apply_pin (_self) . get () [4usize] as sp :: Coord ,) , 30u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 31u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 32u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 33u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 34u32 => (360f64 as sp :: Coord , (((((({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
-                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 55u32 => (({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 57u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 58u32 => (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layout_cache }
+                ) . apply_pin (_self) . get () [1usize] as sp :: Coord , (((((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord , 16f64 as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_101_layout_cache }
+                ) . apply_pin (_self) . get () [0usize] as sp :: Coord ,) , 59u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 60u32 => (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layout_cache }
+                ) . apply_pin (_self) . get () [1usize] as sp :: Coord , (((((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as sp :: Coord , 16f64 as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_105_layout_cache }
+                ) . apply_pin (_self) . get () [0usize] as sp :: Coord ,) , 61u32 => (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                ) . apply_pin (_self) . get () [1usize] as sp :: Coord , (((((((((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , 12f64 as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                ) . apply_pin (_self) . get () [0usize] as sp :: Coord ,) , 62u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 63u32 => (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                ) . apply_pin (_self) . get () [3usize] as sp :: Coord , (((((((((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_70_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((16f64) as f64)) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , 12f64 as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_108_layout_cache }
+                ) . apply_pin (_self) . get () [2usize] as sp :: Coord ,) , 64u32 => (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
                  + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) . get () . get () as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
                  + sp :: r#SimpleText :: FIELD_OFFSETS . r#width) . apply_pin (_self) . get () . get () as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_101_x }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_text_113_x }
                 ) . apply_pin (_self) . get () . get () as sp :: Coord , (((((360f64) as f64) - ((({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
-                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) . get () . get ()) as f64)) as f64) / ((2f64) as f64)) as sp :: Coord ,) , 56u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+                 + sp :: r#SimpleText :: FIELD_OFFSETS . r#height) . apply_pin (_self) . get () . get ()) as f64)) as f64) / ((2f64) as f64)) as sp :: Coord ,) , 65u32 => ((((((({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
                 ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                 ) . apply_pin (_self) . get () [1usize] as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
-                ) . apply_pin (_self) . get () [0usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 57u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [0usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 66u32 => ((((((({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
                 ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , 0f64 as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
-                ) . apply_pin (_self) . get () [2usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 58u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [2usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 67u32 => ((((((({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
                 ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                 ) . apply_pin (_self) . get () [5usize] as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
-                ) . apply_pin (_self) . get () [4usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 59u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [4usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 68u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 69u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 70u32 => (0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord , 0f64 as sp :: Coord ,) , 87u32 => ((((((({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
                 ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
                 ) . apply_pin (_self) . get () [7usize] as sp :: Coord , ({
-                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_102_layout_cache }
-                ) . apply_pin (_self) . get () [6usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 33u32 ..= 54u32 => return {
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [6usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 96u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [9usize] as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [8usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 105u32 => ((((((({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_66_layout_cache }
+                ) . apply_pin (_self) . get () [3usize]) as f64) - ((12f64) as f64)) as f64) - ((12f64) as f64)) as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [11usize] as sp :: Coord , ({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_empty_114_layout_cache }
+                ) . apply_pin (_self) . get () [10usize] as sp :: Coord , 12f64 as sp :: Coord ,) , 35u32 ..= 56u32 => return {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . item_geometry (index - 33u32 + 1) , 60u32 ..= 67u32 => return {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . item_geometry (index - 60u32 + 1) , 68u32 ..= 75u32 => return {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . item_geometry (index - 68u32 + 1) , 76u32 ..= 83u32 => return {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . item_geometry (index - 76u32 + 1) , _ => return :: core :: default :: Default :: default () }
+                 . apply_pin (_self) . item_geometry (index - 35u32 + 1) , 71u32 ..= 78u32 => return {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . item_geometry (index - 71u32 + 1) , 79u32 ..= 86u32 => return {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . item_geometry (index - 79u32 + 1) , 88u32 ..= 95u32 => return {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . item_geometry (index - 88u32 + 1) , 97u32 ..= 104u32 => return {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . item_geometry (index - 97u32 + 1) , 106u32 ..= 113u32 => return {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . item_geometry (index - 106u32 + 1) , _ => return :: core :: default :: Default :: default () }
              ;
              sp :: euclid :: rect (x , y , w , h) }
          fn accessible_role (self : :: core :: pin :: Pin < & Self > , index : u32) -> sp :: AccessibleRole {
              # ! [allow (unused)] let _self = self ;
              match index {
-                 4u32 => sp :: r#AccessibleRole :: r#Text , 8u32 => sp :: r#AccessibleRole :: r#Text , 9u32 => sp :: r#AccessibleRole :: r#List , 27u32 => sp :: r#AccessibleRole :: r#Text , 28u32 => sp :: r#AccessibleRole :: r#Text , 55u32 => sp :: r#AccessibleRole :: r#Text , 56u32 => sp :: r#AccessibleRole :: r#Button , 58u32 => sp :: r#AccessibleRole :: r#Button , 59u32 => sp :: r#AccessibleRole :: r#Button , 32u32 => {
+                 4u32 => sp :: r#AccessibleRole :: r#Text , 8u32 => sp :: r#AccessibleRole :: r#Text , 9u32 => sp :: r#AccessibleRole :: r#List , 27u32 => sp :: r#AccessibleRole :: r#Text , 28u32 => sp :: r#AccessibleRole :: r#Text , 58u32 => sp :: r#AccessibleRole :: r#Text , 61u32 => sp :: r#AccessibleRole :: r#Text , 63u32 => sp :: r#AccessibleRole :: r#Text , 64u32 => sp :: r#AccessibleRole :: r#Text , 65u32 => sp :: r#AccessibleRole :: r#Button , 67u32 => sp :: r#AccessibleRole :: r#Button , 87u32 => sp :: r#AccessibleRole :: r#Button , 96u32 => sp :: r#AccessibleRole :: r#Button , 105u32 => sp :: r#AccessibleRole :: r#Button , 34u32 => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessible_role (0) , 33u32 ..= 54u32 => {
+                 . apply_pin (_self) . accessible_role (0) , 35u32 ..= 56u32 => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessible_role (index - 33u32 + 1) , 56u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessible_role (0) , 60u32 ..= 67u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessible_role (index - 60u32 + 1) , 58u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessible_role (0) , 68u32 ..= 75u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessible_role (index - 68u32 + 1) , 59u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessible_role (0) , 76u32 ..= 83u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessible_role (index - 76u32 + 1) , _ => sp :: AccessibleRole :: default () , }
+                 . apply_pin (_self) . accessible_role (index - 35u32 + 1) , 65u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessible_role (0) , 71u32 ..= 78u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessible_role (index - 71u32 + 1) , 67u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessible_role (0) , 79u32 ..= 86u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessible_role (index - 79u32 + 1) , 87u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessible_role (0) , 88u32 ..= 95u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessible_role (index - 88u32 + 1) , 96u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessible_role (0) , 97u32 ..= 104u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessible_role (index - 97u32 + 1) , 105u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessible_role (0) , 106u32 ..= 113u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessible_role (index - 106u32 + 1) , _ => sp :: AccessibleRole :: default () , }
              }
          fn accessible_string_property (self : :: core :: pin :: Pin < & Self > , index : u32 , what : sp :: AccessibleStringProperty ,) -> sp :: Option < sp :: SharedString > {
              # ! [allow (unused)] let _self = self ;
@@ -8548,168 +9746,262 @@ mod slint_generatedAppWindow {
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_title }
                 ) . apply_pin (_self) . get ()) , (28u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
                      * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_subtitle }
-                ) . apply_pin (_self) . get ()) , (55u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (sp :: SharedString :: from ("Content for this step will appear here.")) , (56u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
+                ) . apply_pin (_self) . get ()) , (58u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+                ) . apply_pin (_self) . get ()) , (61u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+                ) . apply_pin (_self) . get ()) , (63u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+                ) . apply_pin (_self) . get ()) , (64u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (sp :: SharedString :: from ("Content for this step will appear here.")) , (65u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (56u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                ) , (65u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_checked }
                 ) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (56u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                ) , (65u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
                  + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (56u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                ) , (65u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
-                ) . apply_pin (_self) . get ()) , (58u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
+                ) . apply_pin (_self) . get ()) , (67u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (58u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                ) , (67u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_checked }
                 ) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (58u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                ) , (67u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
                  + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (58u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                ) , (67u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
-                ) . apply_pin (_self) . get ()) , (59u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
+                ) . apply_pin (_self) . get ()) , (87u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (59u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                ) , (87u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_checked }
                 ) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (59u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                ) , (87u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
                  + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) . get () {
                      (sp :: SharedString :: from ("true")) as _ }
                  else {
                      sp :: SharedString :: from ("false") }
-                ) , (59u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
-                     InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                ) , (87u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                  + {
                      * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
-                ) . apply_pin (_self) . get ()) , (32u32 , _) => {
+                ) . apply_pin (_self) . get ()) , (96u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (96u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_checked }
+                ) . apply_pin (_self) . get () {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (96u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) . get () {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (96u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+                ) . apply_pin (_self) . get ()) , (105u32 , sp :: AccessibleStringProperty :: r#Checkable) => sp :: Some (if false {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (105u32 , sp :: AccessibleStringProperty :: r#Checked) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_checked }
+                ) . apply_pin (_self) . get () {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (105u32 , sp :: AccessibleStringProperty :: r#Enabled) => sp :: Some (if ({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+                 + sp :: r#FocusScope :: FIELD_OFFSETS . r#enabled) . apply_pin (_self) . get () {
+                     (sp :: SharedString :: from ("true")) as _ }
+                 else {
+                     sp :: SharedString :: from ("false") }
+                ) , (105u32 , sp :: AccessibleStringProperty :: r#Label) => sp :: Some (({
+                     InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                 + {
+                     * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_text }
+                ) . apply_pin (_self) . get ()) , (34u32 , _) => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessible_string_property (0 , what) , (33u32 ..= 54u32 , _) => {
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (35u32 ..= 56u32 , _) => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessible_string_property (index - 33u32 + 1 , what) , (56u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessible_string_property (0 , what) , (60u32 ..= 67u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessible_string_property (index - 60u32 + 1 , what) , (58u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessible_string_property (0 , what) , (68u32 ..= 75u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessible_string_property (index - 68u32 + 1 , what) , (59u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessible_string_property (0 , what) , (76u32 ..= 83u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessible_string_property (index - 76u32 + 1 , what) , _ => sp :: None , }
+                 . apply_pin (_self) . accessible_string_property (index - 35u32 + 1 , what) , (65u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (71u32 ..= 78u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessible_string_property (index - 71u32 + 1 , what) , (67u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (79u32 ..= 86u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessible_string_property (index - 79u32 + 1 , what) , (87u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (88u32 ..= 95u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessible_string_property (index - 88u32 + 1 , what) , (96u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (97u32 ..= 104u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessible_string_property (index - 97u32 + 1 , what) , (105u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessible_string_property (0 , what) , (106u32 ..= 113u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessible_string_property (index - 106u32 + 1 , what) , _ => sp :: None , }
              }
          fn accessibility_action (self : :: core :: pin :: Pin < & Self > , index : u32 , action : & sp :: AccessibilityAction) {
              # ! [allow (unused)] let _self = self ;
              match (index , action) {
-                 (56u32 , sp :: AccessibilityAction :: r#Default) => {
+                 (65u32 , sp :: AccessibilityAction :: r#Default) => {
                      ({
-                         InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                         InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
                      + {
                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_accessible_action_default }
                     ) . apply_pin (_self) . call (& ()) }
-                 (58u32 , sp :: AccessibilityAction :: r#Default) => {
+                 (67u32 , sp :: AccessibilityAction :: r#Default) => {
                      ({
-                         InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                         InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
                      + {
                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_accessible_action_default }
                     ) . apply_pin (_self) . call (& ()) }
-                 (59u32 , sp :: AccessibilityAction :: r#Default) => {
+                 (87u32 , sp :: AccessibilityAction :: r#Default) => {
                      ({
-                         InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                         InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
                      + {
                          * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_accessible_action_default }
                     ) . apply_pin (_self) . call (& ()) }
-                 (32u32 , _) => {
+                 (96u32 , sp :: AccessibilityAction :: r#Default) => {
+                     ({
+                         InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+                     + {
+                         * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_accessible_action_default }
+                    ) . apply_pin (_self) . call (& ()) }
+                 (105u32 , sp :: AccessibilityAction :: r#Default) => {
+                     ({
+                         InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+                     + {
+                         * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37_accessible_action_default }
+                    ) . apply_pin (_self) . call (& ()) }
+                 (34u32 , _) => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessibility_action (0 , action) , (33u32 ..= 54u32 , _) => {
+                 . apply_pin (_self) . accessibility_action (0 , action) , (35u32 ..= 56u32 , _) => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . accessibility_action (index - 33u32 + 1 , action) , (56u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessibility_action (0 , action) , (60u32 ..= 67u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . accessibility_action (index - 60u32 + 1 , action) , (58u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessibility_action (0 , action) , (68u32 ..= 75u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . accessibility_action (index - 68u32 + 1 , action) , (59u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessibility_action (0 , action) , (76u32 ..= 83u32 , _) => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . accessibility_action (index - 76u32 + 1 , action) , _ => () , }
+                 . apply_pin (_self) . accessibility_action (index - 35u32 + 1 , action) , (65u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessibility_action (0 , action) , (71u32 ..= 78u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . accessibility_action (index - 71u32 + 1 , action) , (67u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessibility_action (0 , action) , (79u32 ..= 86u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . accessibility_action (index - 79u32 + 1 , action) , (87u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessibility_action (0 , action) , (88u32 ..= 95u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . accessibility_action (index - 88u32 + 1 , action) , (96u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessibility_action (0 , action) , (97u32 ..= 104u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . accessibility_action (index - 97u32 + 1 , action) , (105u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessibility_action (0 , action) , (106u32 ..= 113u32 , _) => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . accessibility_action (index - 106u32 + 1 , action) , _ => () , }
              }
          fn supported_accessibility_actions (self : :: core :: pin :: Pin < & Self > , index : u32) -> sp :: SupportedAccessibilityAction {
              # ! [allow (unused)] let _self = self ;
              match index {
-                 56u32 => sp :: SupportedAccessibilityAction :: r#Default , 58u32 => sp :: SupportedAccessibilityAction :: r#Default , 59u32 => sp :: SupportedAccessibilityAction :: r#Default , 32u32 => {
+                 65u32 => sp :: SupportedAccessibilityAction :: r#Default , 67u32 => sp :: SupportedAccessibilityAction :: r#Default , 87u32 => sp :: SupportedAccessibilityAction :: r#Default , 96u32 => sp :: SupportedAccessibilityAction :: r#Default , 105u32 => sp :: SupportedAccessibilityAction :: r#Default , 34u32 => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . supported_accessibility_actions (0) , 33u32 ..= 54u32 => {
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 35u32 ..= 56u32 => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . supported_accessibility_actions (index - 33u32 + 1) , 56u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . supported_accessibility_actions (0) , 60u32 ..= 67u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . supported_accessibility_actions (index - 60u32 + 1) , 58u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . supported_accessibility_actions (0) , 68u32 ..= 75u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . supported_accessibility_actions (index - 68u32 + 1) , 59u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . supported_accessibility_actions (0) , 76u32 ..= 83u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . supported_accessibility_actions (index - 76u32 + 1) , _ => :: core :: default :: Default :: default () , }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 35u32 + 1) , 65u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 71u32 ..= 78u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 71u32 + 1) , 67u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 79u32 ..= 86u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 79u32 + 1) , 87u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 88u32 ..= 95u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 88u32 + 1) , 96u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 97u32 ..= 104u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 97u32 + 1) , 105u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . supported_accessibility_actions (0) , 106u32 ..= 113u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . supported_accessibility_actions (index - 106u32 + 1) , _ => :: core :: default :: Default :: default () , }
              }
          fn item_element_infos (self : :: core :: pin :: Pin < & Self > , index : u32) -> sp :: Option < sp :: SharedString > {
              # ! [allow (unused)] let _self = self ;
              match index {
-                 33u32 ..= 54u32 => {
+                 35u32 ..= 56u32 => {
                      * & Self :: FIELD_OFFSETS . r#diskcontent_99 }
-                 . apply_pin (_self) . item_element_infos (index - 33u32 + 1) , 60u32 ..= 67u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_103 }
-                 . apply_pin (_self) . item_element_infos (index - 60u32 + 1) , 68u32 ..= 75u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_105 }
-                 . apply_pin (_self) . item_element_infos (index - 68u32 + 1) , 76u32 ..= 83u32 => {
-                     * & Self :: FIELD_OFFSETS . r#button_106 }
-                 . apply_pin (_self) . item_element_infos (index - 76u32 + 1) , _ => {
+                 . apply_pin (_self) . item_element_infos (index - 35u32 + 1) , 71u32 ..= 78u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_115 }
+                 . apply_pin (_self) . item_element_infos (index - 71u32 + 1) , 79u32 ..= 86u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_117 }
+                 . apply_pin (_self) . item_element_infos (index - 79u32 + 1) , 88u32 ..= 95u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_119 }
+                 . apply_pin (_self) . item_element_infos (index - 88u32 + 1) , 97u32 ..= 104u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_121 }
+                 . apply_pin (_self) . item_element_infos (index - 97u32 + 1) , 106u32 ..= 113u32 => {
+                     * & Self :: FIELD_OFFSETS . r#button_123 }
+                 . apply_pin (_self) . item_element_infos (index - 106u32 + 1) , _ => {
                      :: core :: default :: Default :: default () }
                  }
              }
@@ -8719,14 +10011,14 @@ mod slint_generatedAppWindow {
              ((((({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_index }
             ) . apply_pin (_self) . get ()) as f64) > ((0f64) as f64))) as _ }
-         # [allow (dead_code , unused)] pub fn r#fn_can_go_next (self : :: core :: pin :: Pin < & Self > ,) -> bool {
+         # [allow (dead_code , unused)] pub fn r#fn_is_final_step (self : :: core :: pin :: Pin < & Self > ,) -> bool {
              let _self = self ;
              let args = () ;
-             ((((((({
+             (sp :: ApproxEq :: < f64 > :: approx_eq (& (({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_current_step_index }
-            ) . apply_pin (_self) . get ()) as f64) + ((1f64) as f64)) as f64) < ((({
+            ) . apply_pin (_self) . get () as f64) , & (((({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_total_steps }
-            ) . apply_pin (_self) . get ()) as f64))) as _ }
+            ) . apply_pin (_self) . get ()) as f64) - ((1f64) as f64) as f64))) as _ }
          }
      # [derive (sp :: FieldOffsets , Default)] # [const_field_offset (sp :: const_field_offset)] # [repr (C)] # [pin_drop] struct InnerComponent_stepitem_77 {
          r#stepitem_77 : InnerStepItem_root_1 , r#model_data : sp :: Property < r#StepData > , r#model_index : sp :: Property < i32 > , r#stepitem_77_actual_y : sp :: Property < sp :: LogicalLength > , self_weak : sp :: OnceCell < sp :: VWeakMapped < sp :: ItemTreeVTable , InnerComponent_stepitem_77 >> , parent : sp :: VWeakMapped :: < sp :: ItemTreeVTable , InnerAppWindow > , globals : sp :: OnceCell < sp :: Rc < SharedGlobals >> , tree_index : :: core :: cell :: Cell < u32 > , tree_index_of_first_child : :: core :: cell :: Cell < u32 > , }
@@ -9108,14 +10400,14 @@ mod slint_generatedAppWindow {
              :: core :: result :: Result :: Ok (self_rc) }
          fn item_tree () -> & 'static [sp :: ItemTreeNode] {
              const ITEM_TREE : [sp :: ItemTreeNode ;
-             84usize] = [sp :: ItemTreeNode :: Item {
+             114usize] = [sp :: ItemTreeNode :: Item {
                  is_accessible : false , children_count : 1u32 , children_index : 1u32 , parent_index : 0u32 , item_array_index : 0u32 , }
              , sp :: ItemTreeNode :: Item {
                  is_accessible : false , children_count : 2u32 , children_index : 2u32 , parent_index : 0u32 , item_array_index : 1u32 , }
              , sp :: ItemTreeNode :: Item {
                  is_accessible : false , children_count : 2u32 , children_index : 4u32 , parent_index : 1u32 , item_array_index : 2u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 4u32 , children_index : 56u32 , parent_index : 1u32 , item_array_index : 3u32 , }
+                 is_accessible : false , children_count : 6u32 , children_index : 65u32 , parent_index : 1u32 , item_array_index : 3u32 , }
              , sp :: ItemTreeNode :: Item {
                  is_accessible : true , children_count : 0u32 , children_index : 6u32 , parent_index : 2u32 , item_array_index : 4u32 , }
              , sp :: ItemTreeNode :: Item {
@@ -9167,120 +10459,180 @@ mod slint_generatedAppWindow {
              , sp :: ItemTreeNode :: Item {
                  is_accessible : true , children_count : 0u32 , children_index : 30u32 , parent_index : 7u32 , item_array_index : 27u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 2u32 , children_index : 30u32 , parent_index : 7u32 , item_array_index : 28u32 , }
+                 is_accessible : false , children_count : 4u32 , children_index : 30u32 , parent_index : 7u32 , item_array_index : 28u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 32u32 , parent_index : 29u32 , item_array_index : 29u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 34u32 , parent_index : 29u32 , item_array_index : 29u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 55u32 , parent_index : 29u32 , item_array_index : 30u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 57u32 , parent_index : 29u32 , item_array_index : 30u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 3u32 , children_index : 33u32 , parent_index : 30u32 , item_array_index : 31u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 59u32 , parent_index : 29u32 , item_array_index : 31u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 0u32 , children_index : 36u32 , parent_index : 32u32 , item_array_index : 32u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 64u32 , parent_index : 29u32 , item_array_index : 32u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 36u32 , parent_index : 32u32 , item_array_index : 33u32 , }
+                 is_accessible : false , children_count : 3u32 , children_index : 35u32 , parent_index : 30u32 , item_array_index : 33u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 37u32 , parent_index : 32u32 , item_array_index : 34u32 , }
+                 is_accessible : true , children_count : 0u32 , children_index : 38u32 , parent_index : 34u32 , item_array_index : 34u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 0u32 , children_index : 37u32 , parent_index : 34u32 , item_array_index : 35u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 38u32 , parent_index : 34u32 , item_array_index : 35u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 3u32 , children_index : 38u32 , parent_index : 35u32 , item_array_index : 36u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 39u32 , parent_index : 34u32 , item_array_index : 36u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 41u32 , parent_index : 37u32 , item_array_index : 37u32 , }
+                 is_accessible : true , children_count : 0u32 , children_index : 39u32 , parent_index : 36u32 , item_array_index : 37u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 43u32 , parent_index : 37u32 , item_array_index : 38u32 , }
+                 is_accessible : true , children_count : 3u32 , children_index : 40u32 , parent_index : 37u32 , item_array_index : 38u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 49u32 , parent_index : 37u32 , item_array_index : 39u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 43u32 , parent_index : 39u32 , item_array_index : 39u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 42u32 , parent_index : 38u32 , item_array_index : 40u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 45u32 , parent_index : 39u32 , item_array_index : 40u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 51u32 , parent_index : 39u32 , item_array_index : 41u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 44u32 , parent_index : 40u32 , item_array_index : 42u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 1u32 , parent_index : 41u32 , }
+                 index : 1u32 , parent_index : 43u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 44u32 , parent_index : 39u32 , item_array_index : 41u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 46u32 , parent_index : 41u32 , item_array_index : 43u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 3u32 , children_index : 45u32 , parent_index : 43u32 , item_array_index : 42u32 , }
+                 is_accessible : false , children_count : 3u32 , children_index : 47u32 , parent_index : 45u32 , item_array_index : 44u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 48u32 , parent_index : 44u32 , item_array_index : 43u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 50u32 , parent_index : 46u32 , item_array_index : 45u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 48u32 , parent_index : 44u32 , item_array_index : 44u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 50u32 , parent_index : 46u32 , item_array_index : 46u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 49u32 , parent_index : 44u32 , item_array_index : 45u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 51u32 , parent_index : 46u32 , item_array_index : 47u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 49u32 , parent_index : 46u32 , item_array_index : 46u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 51u32 , parent_index : 48u32 , item_array_index : 48u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 50u32 , parent_index : 40u32 , item_array_index : 47u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 52u32 , parent_index : 42u32 , item_array_index : 49u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 3u32 , children_index : 51u32 , parent_index : 49u32 , item_array_index : 48u32 , }
+                 is_accessible : false , children_count : 3u32 , children_index : 53u32 , parent_index : 51u32 , item_array_index : 50u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 54u32 , parent_index : 50u32 , item_array_index : 49u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 56u32 , parent_index : 52u32 , item_array_index : 51u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 54u32 , parent_index : 50u32 , item_array_index : 50u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 56u32 , parent_index : 52u32 , item_array_index : 52u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 55u32 , parent_index : 50u32 , item_array_index : 51u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 57u32 , parent_index : 52u32 , item_array_index : 53u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 55u32 , parent_index : 52u32 , item_array_index : 52u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 57u32 , parent_index : 54u32 , item_array_index : 54u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 0u32 , children_index : 56u32 , parent_index : 31u32 , item_array_index : 53u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 58u32 , parent_index : 31u32 , item_array_index : 55u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 7u32 , children_index : 60u32 , parent_index : 3u32 , item_array_index : 54u32 , }
+                 is_accessible : true , children_count : 0u32 , children_index : 59u32 , parent_index : 57u32 , item_array_index : 56u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 68u32 , parent_index : 3u32 , item_array_index : 55u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 60u32 , parent_index : 32u32 , item_array_index : 57u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 7u32 , children_index : 68u32 , parent_index : 3u32 , item_array_index : 56u32 , }
+                 is_accessible : false , children_count : 2u32 , children_index : 61u32 , parent_index : 59u32 , item_array_index : 58u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : true , children_count : 7u32 , children_index : 76u32 , parent_index : 3u32 , item_array_index : 57u32 , }
+                 is_accessible : true , children_count : 0u32 , children_index : 63u32 , parent_index : 60u32 , item_array_index : 59u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 67u32 , parent_index : 56u32 , item_array_index : 58u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 63u32 , parent_index : 60u32 , item_array_index : 60u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 0u32 , children_index : 64u32 , parent_index : 62u32 , item_array_index : 61u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 0u32 , children_index : 65u32 , parent_index : 33u32 , item_array_index : 62u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 7u32 , children_index : 71u32 , parent_index : 3u32 , item_array_index : 63u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 79u32 , parent_index : 3u32 , item_array_index : 64u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 7u32 , children_index : 79u32 , parent_index : 3u32 , item_array_index : 65u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 87u32 , parent_index : 3u32 , item_array_index : 66u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 96u32 , parent_index : 3u32 , item_array_index : 67u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 105u32 , parent_index : 3u32 , item_array_index : 68u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 78u32 , parent_index : 65u32 , item_array_index : 69u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 2u32 , parent_index : 56u32 , }
+                 index : 2u32 , parent_index : 65u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 3u32 , parent_index : 56u32 , }
+                 index : 3u32 , parent_index : 65u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 4u32 , parent_index : 56u32 , }
+                 index : 4u32 , parent_index : 65u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 5u32 , parent_index : 56u32 , }
+                 index : 5u32 , parent_index : 65u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 68u32 , parent_index : 56u32 , item_array_index : 59u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 79u32 , parent_index : 65u32 , item_array_index : 70u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 68u32 , parent_index : 56u32 , item_array_index : 60u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 79u32 , parent_index : 65u32 , item_array_index : 71u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 68u32 , parent_index : 60u32 , item_array_index : 61u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 79u32 , parent_index : 71u32 , item_array_index : 72u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 75u32 , parent_index : 58u32 , item_array_index : 62u32 , }
+                 is_accessible : false , children_count : 1u32 , children_index : 86u32 , parent_index : 67u32 , item_array_index : 73u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 6u32 , parent_index : 58u32 , }
+                 index : 6u32 , parent_index : 67u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 7u32 , parent_index : 58u32 , }
+                 index : 7u32 , parent_index : 67u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 8u32 , parent_index : 58u32 , }
+                 index : 8u32 , parent_index : 67u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 9u32 , parent_index : 58u32 , }
+                 index : 9u32 , parent_index : 67u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 76u32 , parent_index : 58u32 , item_array_index : 63u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 87u32 , parent_index : 67u32 , item_array_index : 74u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 76u32 , parent_index : 58u32 , item_array_index : 64u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 87u32 , parent_index : 67u32 , item_array_index : 75u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 76u32 , parent_index : 68u32 , item_array_index : 65u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 87u32 , parent_index : 79u32 , item_array_index : 76u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 1u32 , children_index : 83u32 , parent_index : 59u32 , item_array_index : 66u32 , }
+                 is_accessible : true , children_count : 7u32 , children_index : 88u32 , parent_index : 68u32 , item_array_index : 77u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 95u32 , parent_index : 87u32 , item_array_index : 78u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 10u32 , parent_index : 59u32 , }
+                 index : 10u32 , parent_index : 87u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 11u32 , parent_index : 59u32 , }
+                 index : 11u32 , parent_index : 87u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 12u32 , parent_index : 59u32 , }
+                 index : 12u32 , parent_index : 87u32 , }
              , sp :: ItemTreeNode :: DynamicTree {
-                 index : 13u32 , parent_index : 59u32 , }
+                 index : 13u32 , parent_index : 87u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 84u32 , parent_index : 59u32 , item_array_index : 67u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 96u32 , parent_index : 87u32 , item_array_index : 79u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 84u32 , parent_index : 59u32 , item_array_index : 68u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 96u32 , parent_index : 87u32 , item_array_index : 80u32 , }
              , sp :: ItemTreeNode :: Item {
-                 is_accessible : false , children_count : 0u32 , children_index : 84u32 , parent_index : 76u32 , item_array_index : 69u32 , }
+                 is_accessible : false , children_count : 0u32 , children_index : 96u32 , parent_index : 88u32 , item_array_index : 81u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 7u32 , children_index : 97u32 , parent_index : 69u32 , item_array_index : 82u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 104u32 , parent_index : 96u32 , item_array_index : 83u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 14u32 , parent_index : 96u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 15u32 , parent_index : 96u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 16u32 , parent_index : 96u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 17u32 , parent_index : 96u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 105u32 , parent_index : 96u32 , item_array_index : 84u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 105u32 , parent_index : 96u32 , item_array_index : 85u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 105u32 , parent_index : 97u32 , item_array_index : 86u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : true , children_count : 7u32 , children_index : 106u32 , parent_index : 70u32 , item_array_index : 87u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 1u32 , children_index : 113u32 , parent_index : 105u32 , item_array_index : 88u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 18u32 , parent_index : 105u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 19u32 , parent_index : 105u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 20u32 , parent_index : 105u32 , }
+             , sp :: ItemTreeNode :: DynamicTree {
+                 index : 21u32 , parent_index : 105u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 114u32 , parent_index : 105u32 , item_array_index : 89u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 114u32 , parent_index : 105u32 , item_array_index : 90u32 , }
+             , sp :: ItemTreeNode :: Item {
+                 is_accessible : false , children_count : 0u32 , children_index : 114u32 , parent_index : 106u32 , item_array_index : 91u32 , }
             ] ;
              & ITEM_TREE }
          fn item_array () -> & 'static [sp :: VOffset < Self , sp :: ItemVTable , sp :: AllowPin >] {
              static ITEM_ARRAY : sp :: OnceBox < [sp :: VOffset < InnerAppWindow , sp :: ItemVTable , sp :: AllowPin > ;
-             70usize] > = sp :: OnceBox :: new () ;
+             92usize] > = sp :: OnceBox :: new () ;
              & * ITEM_ARRAY . get_or_init (|| sp :: vec ! [sp :: VOffset :: new ({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#root_64 }
             ) , sp :: VOffset :: new ({
@@ -9288,7 +10640,7 @@ mod slint_generatedAppWindow {
             ) , sp :: VOffset :: new ({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_67 }
             ) , sp :: VOffset :: new ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#empty_102 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#empty_114 }
             ) , sp :: VOffset :: new ({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#text_69 }
             ) , sp :: VOffset :: new ({
@@ -9343,6 +10695,10 @@ mod slint_generatedAppWindow {
                  * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_98 }
             ) , sp :: VOffset :: new ({
                  * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_100 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_104 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_112 }
             ) , sp :: VOffset :: new ({
                  InnerAppWindow :: FIELD_OFFSETS . r#diskcontent_99 }
              + {
@@ -9432,67 +10788,127 @@ mod slint_generatedAppWindow {
              + {
                  * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#thumb_35 }
             ) , sp :: VOffset :: new ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_101 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_102 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_103 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_106 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_107 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_109 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_110 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_111 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#text_113 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
             ) , sp :: VOffset :: new ({
-                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_104 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#rectangle_116 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
-             + {
-                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_118 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_120 }
+            ) , sp :: VOffset :: new ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#_visibility_122 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#_opacity_38 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_touch_area_62 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_103 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_115 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#_opacity_38 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_touch_area_62 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_105 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_117 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#_opacity_38 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_touch_area_62 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
             ) , sp :: VOffset :: new ({
-                 InnerAppWindow :: FIELD_OFFSETS . r#button_106 }
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_119 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#_opacity_38 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_touch_area_62 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_121 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#root_37 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#_opacity_38 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_touch_area_62 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
+             + {
+                 * & InnerButton_root_37 :: FIELD_OFFSETS . r#i_focus_scope_63 }
+            ) , sp :: VOffset :: new ({
+                 InnerAppWindow :: FIELD_OFFSETS . r#button_123 }
              + {
                  * & InnerButton_root_37 :: FIELD_OFFSETS . r#rectangle_39 }
             )] . into_boxed_slice () . try_into () . unwrap ()) }
@@ -9619,6 +11035,46 @@ mod slint_generatedAppWindow {
              + {
                  * & InnerDiskContent_root_13 :: FIELD_OFFSETS . r#root_13_items }
             ) . apply_pin (_self) . set (value as _) }
+         # [allow (dead_code)] pub fn get_disk_selection_summary (& self) -> sp :: SharedString {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+            ) . apply_pin (_self) . get () }
+         # [allow (dead_code)] pub fn set_disk_selection_summary (& self , value : sp :: SharedString) {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_disk_selection_summary }
+            ) . apply_pin (_self) . set (value as _) }
+         # [allow (dead_code)] pub fn get_install_log (& self) -> sp :: SharedString {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+            ) . apply_pin (_self) . get () }
+         # [allow (dead_code)] pub fn set_install_log (& self , value : sp :: SharedString) {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_log }
+            ) . apply_pin (_self) . set (value as _) }
+         # [allow (dead_code)] pub fn get_install_plan_summary (& self) -> sp :: SharedString {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+            ) . apply_pin (_self) . get () }
+         # [allow (dead_code)] pub fn set_install_plan_summary (& self , value : sp :: SharedString) {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_install_plan_summary }
+            ) . apply_pin (_self) . set (value as _) }
+         # [allow (dead_code)] pub fn get_installing (& self) -> bool {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+            ) . apply_pin (_self) . get () }
+         # [allow (dead_code)] pub fn set_installing (& self , value : bool) {
+             # [allow (unused_imports)] let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
+             ({
+                 * & InnerAppWindow :: FIELD_OFFSETS . r#root_64_installing }
+            ) . apply_pin (_self) . set (value as _) }
          # [allow (dead_code)] pub fn invoke_request_back (& self ,) -> () {
              let _self = sp :: VRc :: as_pin_ref (& self . 0) ;
              ({
@@ -9683,6 +11139,8 @@ mod slint_generatedAppWindow {
              }
          # [allow (dead_code)] fn invoke_can_go_next (& self , _private_function : ()) {
              }
+         # [allow (dead_code)] fn invoke_is_final_step (& self , _private_function : ()) {
+             }
          }
      impl From < r#AppWindow > for sp :: VRc < sp :: ItemTreeVTable , InnerAppWindow > {
          fn from (value : r#AppWindow) -> Self {
@@ -9711,13 +11169,13 @@ mod slint_generatedAppWindow {
              T :: get (& self) }
          }
      struct SharedGlobals {
-         global_CupertinoPalette_109 : :: core :: pin :: Pin < sp :: Rc < InnerCupertinoPalette_109 >> , window_adapter : sp :: OnceCell < sp :: WindowAdapterRc > , root_item_tree_weak : sp :: VWeak < sp :: ItemTreeVTable > , }
+         global_CupertinoPalette_126 : :: core :: pin :: Pin < sp :: Rc < InnerCupertinoPalette_126 >> , window_adapter : sp :: OnceCell < sp :: WindowAdapterRc > , root_item_tree_weak : sp :: VWeak < sp :: ItemTreeVTable > , }
      impl SharedGlobals {
          fn new (root_item_tree_weak : sp :: VWeak < sp :: ItemTreeVTable >) -> sp :: Rc < Self > {
              let _self = sp :: Rc :: new (Self {
-                 global_CupertinoPalette_109 : InnerCupertinoPalette_109 :: new () , window_adapter : :: core :: default :: Default :: default () , root_item_tree_weak , }
+                 global_CupertinoPalette_126 : InnerCupertinoPalette_126 :: new () , window_adapter : :: core :: default :: Default :: default () , root_item_tree_weak , }
             ) ;
-             _self . global_CupertinoPalette_109 . clone () . init (& _self) ;
+             _self . global_CupertinoPalette_126 . clone () . init (& _self) ;
              _self }
          fn window_adapter_impl (& self) -> sp :: Rc < dyn sp :: WindowAdapter > {
              sp :: Rc :: clone (self . window_adapter_ref () . unwrap ()) }
