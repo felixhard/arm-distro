@@ -6,11 +6,28 @@ PROFILE_SRC="$PROJECT_ROOT/configs/archiso"
 PROFILE_BUILD="$PROJECT_ROOT/build/archiso-profile"
 WORKDIR="$PROJECT_ROOT/build/work"
 OUTDIR="$PROJECT_ROOT/build/iso"
+DEPS_DIR="$PROJECT_ROOT/build/_deps"
+ARCHISO_REPO="https://gitlab.archlinux.org/archlinux/archiso.git"
+ARCHISO_DIR="$DEPS_DIR/archiso"
+MKARCHISO="$ARCHISO_DIR/mkarchiso"
 INSTALLER_BIN="$PROJECT_ROOT/target/aarch64-unknown-linux-gnu/release/installer"
 INSTALL_DEST="airootfs/usr/local/bin/arm-installer"
 
-if ! command -v mkarchiso >/dev/null 2>&1; then
-    echo "mkarchiso not found. Please install archiso (pacman -S archiso)." >&2
+for tool in mksquashfs xorriso mkfs.fat; do
+    if ! command -v "$tool" >/dev/null 2>&1; then
+        echo "Required tool '$tool' not found. Install squashfs-tools, dosfstools, libisoburn." >&2
+        exit 1
+    fi
+done
+
+mkdir -p "$DEPS_DIR"
+if [ ! -d "$ARCHISO_DIR" ]; then
+    echo "Cloning archiso tooling..."
+    git clone --depth 1 "$ARCHISO_REPO" "$ARCHISO_DIR"
+fi
+
+if [ ! -x "$MKARCHISO" ]; then
+    echo "mkarchiso script not found at $MKARCHISO" >&2
     exit 1
 fi
 
@@ -25,4 +42,4 @@ install -Dm0755 "$INSTALLER_BIN" "$PROFILE_BUILD/$INSTALL_DEST"
 rm -rf "$WORKDIR"
 mkdir -p "$OUTDIR"
 
-mkarchiso -v -w "$WORKDIR" -o "$OUTDIR" "$PROFILE_BUILD"
+bash "$MKARCHISO" -v -w "$WORKDIR" -o "$OUTDIR" "$PROFILE_BUILD"
