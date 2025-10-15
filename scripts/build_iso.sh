@@ -33,8 +33,12 @@ if [ ! -d "$ARCHISO_DIR" ]; then
 fi
 
 if [ ! -x "$MKARCHISO" ]; then
-    echo "mkarchiso script not found at $MKARCHISO" >&2
-    exit 1
+    echo "mkarchiso script not found at $MKARCHISO, performing minimal install..."
+    sudo install -Dm755 "$ARCHISO_DIR/mkarchiso" /usr/local/bin/mkarchiso
+    sudo install -Dm755 "$ARCHISO_DIR/scripts/run_archiso" /usr/local/bin/run_archiso
+    sudo install -d /usr/local/share/archiso
+    sudo cp -a "$ARCHISO_DIR/configs" /usr/local/share/archiso/
+    MKARCHISO="/usr/local/bin/mkarchiso"
 fi
 
 if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
