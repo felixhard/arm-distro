@@ -15,6 +15,7 @@ DOWNLOAD_DIR="$BUILD_ROOT/_downloads"
 INSTALLER_REL="usr/local/bin/arm-installer"
 DESKTOP_REL="usr/share/applications/arm-installer.desktop"
 AUTOSTART_REL="etc/profile.d/arm-installer.sh"
+TARGET_DIR="$PROJECT_ROOT/target"
 
 mkdir -p "$DOWNLOAD_DIR" "$ISO_OUT_DIR" "$WORK_DIR"
 
@@ -57,11 +58,14 @@ $SUDO umount "$MOUNT_DIR"
 
 ARCH=$(uname -m)
 if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
-    cargo build --release --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
-    INSTALLER_BIN="$PROJECT_ROOT/target/release/installer"
+    cargo build --release --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml" \
+        --target-dir "$TARGET_DIR"
+    INSTALLER_BIN="$TARGET_DIR/release/installer"
 else
-    cargo build --release --target aarch64-unknown-linux-gnu --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
-    INSTALLER_BIN="$PROJECT_ROOT/target/aarch64-unknown-linux-gnu/release/installer"
+    cargo build --release --target aarch64-unknown-linux-gnu --bin installer \
+        --manifest-path "$PROJECT_ROOT/installer/Cargo.toml" \
+        --target-dir "$TARGET_DIR"
+    INSTALLER_BIN="$TARGET_DIR/aarch64-unknown-linux-gnu/release/installer"
 fi
 
 install -Dm755 "$INSTALLER_BIN" "$TREE_DIR/$INSTALLER_REL"
