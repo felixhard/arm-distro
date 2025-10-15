@@ -1,0 +1,262 @@
+import { VerticalBox, HorizontalBox, Button, ListView } from "std-widgets.slint";
+
+export struct StepData {
+    title: string,
+    subtitle: string,
+}
+
+export struct DiskItem {
+    label: string,
+    path: string,
+    size: string,
+    selected: bool,
+}
+
+component StepItem inherits Rectangle {
+    in property <string> title;
+    in property <string> subtitle;
+    in property <bool> selected;
+
+    background: selected ? #dde6ff : #ffffff;
+    border-radius: 6px;
+    border-width: selected ? 2px : 1px;
+    border-color: selected ? #4c6fff : #d5d7e3;
+
+    VerticalBox {
+        padding: 12px;
+        spacing: 4px;
+        Text {
+            text: root.title;
+            color: selected ? #1d2f56 : #33486c;
+            font-weight: 600;
+        }
+        Text {
+            text: root.subtitle;
+            color: #5a6b86;
+            font-size: 12px;
+        }
+    }
+}
+
+component DiskRow inherits Rectangle {
+    in property <string> label;
+    in property <string> path;
+    in property <string> size;
+    in property <bool> selected;
+    callback activated();
+
+    border-radius: 6px;
+    border-width: selected ? 2px : 1px;
+    border-color: selected ? #4c6fff : #d5d7e3;
+    background: selected ? #dde6ff : #ffffff;
+
+    HorizontalBox {
+        padding: 12px;
+        spacing: 12px;
+
+        VerticalBox {
+            spacing: 4px;
+            Text {
+                text: root.label;
+                color: #1f2a44;
+                font-weight: 600;
+            }
+            Text {
+                text: root.path;
+                color: #5a6b86;
+                font-size: 12px;
+            }
+        }
+
+        Rectangle { width: 0; horizontal-stretch: 1; }
+
+        Text {
+            text: root.size;
+            color: #33486c;
+            horizontal-alignment: right;
+            vertical-alignment: center;
+            font-size: 14px;
+        }
+    }
+
+    TouchArea {
+        width: parent.width;
+        height: parent.height;
+        clicked => root.activated();
+    }
+}
+
+component DiskContent inherits VerticalBox {
+    in property <[DiskItem]> items;
+    callback disk-selected(index: int);
+
+    padding: 16px;
+    spacing: 12px;
+
+    Text {
+        text: "Detected disks";
+        font-size: 16px;
+        color: #1f2a44;
+    }
+
+    Text {
+        text: "No disks detected.";
+        color: #7a889f;
+        horizontal-alignment: center;
+        vertical-alignment: center;
+        visible: root.items.length == 0;
+    }
+
+    ListView {
+        visible: root.items.length != 0;
+        for disk[idx] in root.items : DiskRow {
+            label: disk.label;
+            path: disk.path;
+            size: disk.size;
+            selected: disk.selected;
+            activated => root.disk-selected(idx);
+        }
+    }
+}
+
+export component AppWindow inherits Window {
+    title: "Arm Distro Installer";
+    width: 960px;
+    height: 640px;
+
+    in-out property <int> current-step-index: 0;
+    in-out property <int> total-steps: 0;
+    in-out property <[StepData]> steps: [];
+    in-out property <[DiskItem]> disk-items: [];
+    in-out property <string> current-step-title: "";
+    in-out property <string> current-step-subtitle: "";
+
+    callback request-next();
+    callback request-back();
+    callback request-cancel();
+    callback select-disk(index: int);
+
+    pure function can-go-back() -> bool {
+        self.current-step-index > 0
+    }
+
+    pure function can-go-next() -> bool {
+        self.current-step-index + 1 < self.total-steps
+    }
+
+    Rectangle {
+        background: #f4f6fb;
+        VerticalBox {
+            padding: 24px;
+            spacing: 24px;
+
+            Rectangle {
+                background: #ffffff;
+                border-radius: 12px;
+                border-width: 1px;
+                border-color: #d5d7e3;
+
+                VerticalBox {
+                    padding: 24px;
+                    spacing: 16px;
+
+                    Text {
+                        text: "Installation Wizard";
+                        font-size: 24px;
+                        color: #2c3e50;
+                    }
+
+                    HorizontalBox {
+                        spacing: 24px;
+
+                        Rectangle {
+                            width: 220px;
+                            background: #f9fafc;
+                            border-radius: 8px;
+                            border-width: 1px;
+                            border-color: #e1e5f2;
+
+                            VerticalBox {
+                                padding: 16px;
+                                spacing: 12px;
+
+                                Text {
+                                    text: "Steps";
+                                    font-size: 16px;
+                                    color: #3d4f6b;
+                                }
+
+                                ListView {
+                                    for step[idx] in root.steps : StepItem {
+                                        title: step.title;
+                                        subtitle: step.subtitle;
+                                        selected: idx == root.current-step-index;
+                                    }
+                                }
+                            }
+                        }
+
+                        Rectangle {
+                            background: #ffffff;
+                            border-radius: 8px;
+                            border-width: 1px;
+                            border-color: #e1e5f2;
+                            VerticalBox {
+                                padding: 16px;
+                                spacing: 12px;
+
+                                Text {
+                                    text: root.current-step-title;
+                                    font-size: 20px;
+                                    color: #1f2a44;
+                                }
+                                Text {
+                                    text: root.current-step-subtitle;
+                                    font-size: 16px;
+                                    color: #4c5d78;
+                                }
+                                Rectangle {
+                                    height: 360px;
+                                    background: #f6f8fc;
+                                    border-radius: 6px;
+
+                                    DiskContent {
+                                        items <=> root.disk-items;
+                                        visible: root.current-step-index == 4;
+                                        disk-selected(index) => root.select-disk(index);
+                                    }
+
+                                    Text {
+                                        text: "Content for this step will appear here.";
+                                        horizontal-alignment: center;
+                                        vertical-alignment: center;
+                                        color: #7a889f;
+                                        visible: root.current-step-index != 4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            HorizontalBox {
+                spacing: 12px;
+                Button {
+                    text: "Cancel";
+                    clicked => root.request-cancel();
+                }
+                Rectangle { width: 0; horizontal-stretch: 1; }
+                Button {
+                    text: "Back";
+                    enabled: root.can-go-back();
+                    clicked => root.request-back();
+                }
+                Button {
+                    text: root.can-go-next() ? "Next" : "Install";
+                    clicked => root.request-next();
+                }
+            }
+        }
+    }
+}
