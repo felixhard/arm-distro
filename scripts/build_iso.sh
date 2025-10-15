@@ -1,59 +1,81 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ $# -ne 1 ]]; then
+    echo "Usage: $0 /path/to/archboot-aarch64.iso" >&2
+    exit 1
+fi
+
+BASE_ISO=$(realpath "$1")
+if [[ ! -f "$BASE_ISO" ]]; then
+    echo "Base ISO not found: $BASE_ISO" >&2
+    exit 1
+fi
+
 PROJECT_ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)
-PROFILE_SRC="$PROJECT_ROOT/configs/archiso"
-PROFILE_BUILD="$PROJECT_ROOT/build/archiso-profile"
-WORKDIR="$PROJECT_ROOT/build/work"
-OUTDIR="$PROJECT_ROOT/build/iso"
-DEPS_DIR="$PROJECT_ROOT/build/_deps"
-ARCHISO_REPO="https://gitlab.archlinux.org/archlinux/archiso.git"
-ARCHISO_DIR="$DEPS_DIR/archiso"
-MKARCHISO="$ARCHISO_DIR/mkarchiso"
-ARCH="$(uname -m)"
+BUILD_ROOT="$PROJECT_ROOT/build"
+WORK_DIR="$BUILD_ROOT/archboot-repack"
+ISO_OUT_DIR="$BUILD_ROOT/iso"
+MOUNT_DIR="$WORK_DIR/mount"
+TREE_DIR="$WORK_DIR/tree"
+INSTALLER_REL="usr/local/bin/arm-installer"
+DESKTOP_REL="usr/share/applications/arm-installer.desktop"
+AUTOSTART_REL="etc/profile.d/arm-installer.sh"
+
+mkdir -p "$WORK_DIR" "$ISO_OUT_DIR"
+rm -rf "$TREE_DIR"
+mkdir -p "$MOUNT_DIR" "$TREE_DIR"
+
+if [[ $EUID -ne 0 ]]; then
+    SUDO=sudo
+else
+    SUDO=""
+fi
+
+$SUDO mount -o loop "$BASE_ISO" "$MOUNT_DIR"
+rsync -a "$MOUNT_DIR"/ "$TREE_DIR"/
+$SUDO umount "$MOUNT_DIR"
+
+ARCH=$(uname -m)
 if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
+    cargo build --release --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
     INSTALLER_BIN="$PROJECT_ROOT/target/release/installer"
 else
+    cargo build --release --target aarch64-unknown-linux-gnu --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
     INSTALLER_BIN="$PROJECT_ROOT/target/aarch64-unknown-linux-gnu/release/installer"
 fi
 
-INSTALL_DEST="airootfs/usr/local/bin/arm-installer"
+install -Dm755 "$INSTALLER_BIN" "$TREE_DIR/$INSTALLER_REL"
 
-for tool in mksquashfs xorriso mkfs.fat; do
-    if ! command -v "$tool" >/dev/null 2>&1; then
-        echo "Required tool '$tool' not found. Install squashfs-tools, dosfstools, libisoburn." >&2
-        exit 1
+cat > "$TREE_DIR/$DESKTOP_REL" <<'DESKTOP'
+[Desktop Entry]
+Type=Application
+Name=Arm Distro Installer
+Exec=arm-installer
+Terminal=true
+Categories=System;
+DESKTOP
+
+cat > "$TREE_DIR/$AUTOSTART_REL" <<'AUTOSTART'
+#!/bin/sh
+if [ "$DISPLAY" = "" ]; then
+    TTY=$(tty)
+    if [ "$TTY" = "/dev/tty1" ]; then
+        /usr/local/bin/arm-installer
     fi
-done
-
-mkdir -p "$DEPS_DIR"
-if [ ! -d "$ARCHISO_DIR" ]; then
-    echo "Cloning archiso tooling..."
-    git clone --depth 1 "$ARCHISO_REPO" "$ARCHISO_DIR"
 fi
+AUTOSTART
+chmod 755 "$TREE_DIR/$AUTOSTART_REL"
 
-if [ ! -x "$MKARCHISO" ]; then
-    echo "mkarchiso script not found at $MKARCHISO, performing minimal install..."
-    sudo install -Dm755 "$ARCHISO_DIR/mkarchiso" /usr/local/bin/mkarchiso
-    sudo install -Dm755 "$ARCHISO_DIR/scripts/run_archiso" /usr/local/bin/run_archiso
-    sudo install -d /usr/local/share/archiso
-    sudo cp -a "$ARCHISO_DIR/configs" /usr/local/share/archiso/
-    MKARCHISO="/usr/local/bin/mkarchiso"
+OUTPUT_NAME="$(basename "$BASE_ISO" .iso)-arm-distro"
+cd "$TREE_DIR"
+$SUDO ./scripts/mkimage.sh iso "$OUTPUT_NAME"
+
+ISO_SOURCE=$(find out -name '*.iso' -print -quit)
+if [[ -z "$ISO_SOURCE" ]]; then
+    echo "Failed to locate rebuilt ISO" >&2
+    exit 1
 fi
+mv "$ISO_SOURCE" "$ISO_OUT_DIR/${OUTPUT_NAME}.iso"
 
-if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
-    cargo build --release --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
-else
-    cargo build --release --target aarch64-unknown-linux-gnu --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
-fi
-
-rm -rf "$PROFILE_BUILD"
-mkdir -p "$PROFILE_BUILD"
-cp -a "$PROFILE_SRC"/. "$PROFILE_BUILD"
-
-install -Dm0755 "$INSTALLER_BIN" "$PROFILE_BUILD/$INSTALL_DEST"
-
-rm -rf "$WORKDIR"
-mkdir -p "$OUTDIR"
-
-bash "$MKARCHISO" -v -w "$WORKDIR" -o "$OUTDIR" "$PROFILE_BUILD"
+echo "Repacked ISO written to $ISO_OUT_DIR/${OUTPUT_NAME}.iso"
