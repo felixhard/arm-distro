@@ -1,14 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ $# -ne 1 ]]; then
-    echo "Usage: $0 /path/to/archboot-aarch64.iso" >&2
+if [[ $# -lt 1 || $# -gt 2 ]]; then
+    echo "Usage: $0 /path/to/archboot-aarch64.iso [output-name.iso]" >&2
     exit 1
 fi
 
-BASE_ISO=$(realpath "$1")
-if [[ ! -f "$BASE_ISO" ]]; then
-    echo "Base ISO not found: $BASE_ISO" >&2
+ISO_SOURCE="$1"
+if [[ "$ISO_SOURCE" =~ ^https?:// ]]; then
+    echo "Downloading base ISO from $ISO_SOURCE"
+    mkdir -p "$PROJECT_ROOT/build/_downloads"
+    ISO_PATH="$PROJECT_ROOT/build/_downloads/$(basename "$ISO_SOURCE")"
+    curl -L -o "$ISO_PATH" "$ISO_SOURCE"
+else
+    ISO_PATH=$(realpath "$ISO_SOURCE")
+fi
+
+if [[ ! -f "$ISO_PATH" ]]; then
+    echo "Base ISO not found: $ISO_PATH" >&2
     exit 1
 fi
 
@@ -20,7 +29,11 @@ OVERLAY_DIR="$WORK_DIR/overlay"
 INSTALLER_REL="usr/local/bin/arm-installer"
 DESKTOP_REL="usr/share/applications/arm-installer.desktop"
 AUTOSTART_REL="etc/profile.d/arm-installer.sh"
-OUTPUT_NAME="$(basename "$BASE_ISO" .iso)-arm-distro.iso"
+if [[ $# -eq 2 ]]; then
+    OUTPUT_NAME="$2"
+else
+    OUTPUT_NAME="$(basename "$ISO_PATH" .iso)-arm-distro.iso"
+fi
 
 mkdir -p "$WORK_DIR" "$ISO_OUT_DIR"
 rm -rf "$OVERLAY_DIR"
@@ -68,7 +81,7 @@ OUT_ISO="$ISO_OUT_DIR/$OUTPUT_NAME"
 
 echo "Creating repacked ISO at $OUT_ISO"
 
-xorriso -indev "$BASE_ISO" \
+xorriso -indev "$ISO_PATH" \
         -outdev "$OUT_ISO" \
         -map "$OVERLAY_DIR" / \
         -boot_image any replay > "$WORK_DIR/xorriso.log" 2>&1 || {
