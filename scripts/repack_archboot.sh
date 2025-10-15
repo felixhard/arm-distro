@@ -9,7 +9,7 @@ OUTPUT_NAME="${2:-}"  # optional second arg
 BUILD_ROOT="$PROJECT_ROOT/build"
 WORK_DIR="$BUILD_ROOT/archboot-repack"
 MOUNT_DIR="$WORK_DIR/mount"
-TREE_DIR="$WORK_DIR/tree"
+ISO_TREE="$WORK_DIR/iso"
 ROOTFS_DIR="$WORK_DIR/rootfs"
 ISO_OUT_DIR="$BUILD_ROOT/iso"
 DOWNLOAD_DIR="$BUILD_ROOT/_downloads"
@@ -52,14 +52,14 @@ else
     SUDO=""
 fi
 
-rm -rf "$TREE_DIR" "$ROOTFS_DIR"
-mkdir -p "$MOUNT_DIR" "$TREE_DIR"
+rm -rf "$ISO_TREE" "$ROOTFS_DIR"
+mkdir -p "$MOUNT_DIR" "$ISO_TREE"
 
 $SUDO mount -o loop "$ISO_PATH" "$MOUNT_DIR"
-rsync -a "$MOUNT_DIR"/ "$TREE_DIR"/
+rsync -a "$MOUNT_DIR"/ "$ISO_TREE"/
 $SUDO umount "$MOUNT_DIR"
 
-ROOTFS_IMAGE=$(find "$TREE_DIR" -name '*.sfs' -print | head -n1)
+ROOTFS_IMAGE=$(find "$ISO_TREE" -name '*.sfs' -o -name '*.squashfs' -print | head -n1)
 if [[ -z "$ROOTFS_IMAGE" ]]; then
     echo "Could not locate rootfs squashfs image inside ISO" >&2
     exit 1
@@ -121,6 +121,6 @@ echo "Creating repacked ISO at $OUT_ISO"
 xorriso -as mkisofs \
     -iso-level 3 -full-iso9660-filenames -volid "$VOLUME_ID" \
     -eltorito-alt-boot --efi-boot EFI/BOOT/BOOTAA64.EFI -no-emul-boot \
-    -output "$OUT_ISO" "$TREE_DIR" >/dev/null 2>&1
+    -output "$OUT_ISO" "$ISO_TREE" >/dev/null 2>&1
 
 echo "Repacked ISO written to $OUT_ISO"
