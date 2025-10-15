@@ -10,7 +10,13 @@ DEPS_DIR="$PROJECT_ROOT/build/_deps"
 ARCHISO_REPO="https://gitlab.archlinux.org/archlinux/archiso.git"
 ARCHISO_DIR="$DEPS_DIR/archiso"
 MKARCHISO="$ARCHISO_DIR/mkarchiso"
-INSTALLER_BIN="$PROJECT_ROOT/target/aarch64-unknown-linux-gnu/release/installer"
+ARCH="$(uname -m)"
+if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
+    INSTALLER_BIN="$PROJECT_ROOT/target/release/installer"
+else
+    INSTALLER_BIN="$PROJECT_ROOT/target/aarch64-unknown-linux-gnu/release/installer"
+fi
+
 INSTALL_DEST="airootfs/usr/local/bin/arm-installer"
 
 for tool in mksquashfs xorriso mkfs.fat; do
@@ -31,7 +37,11 @@ if [ ! -x "$MKARCHISO" ]; then
     exit 1
 fi
 
-cargo build --release --target aarch64-unknown-linux-gnu --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
+if [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then
+    cargo build --release --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
+else
+    cargo build --release --target aarch64-unknown-linux-gnu --bin installer --manifest-path "$PROJECT_ROOT/installer/Cargo.toml"
+fi
 
 rm -rf "$PROFILE_BUILD"
 mkdir -p "$PROFILE_BUILD"
